@@ -1,0 +1,42 @@
+@import "@/assets/scss/consts.scss";
+
+footer {
+	width: 100vw;
+	color: $dark-gray;
+	background-color: $secondary;
+
+	section {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-bottom: 1px solid $dark-gray;
+		padding: 1.5em 0;
+
+		p {
+			width: fit-content;
+		}
+
+		ul {
+			list-style: none;
+			display: grid;
+			padding: 0;
+			margin: 0;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+
+			li {
+				&:nth-child(even) {
+					grid-column: 3 / 5;
+				}
+
+				&:nth-child(odd) {
+					grid-column: 1 / 3;
+
+					&:last-child {
+						grid-column: 2 / 4;
+					}
+				}
+			}
+		}
+	}
+}
