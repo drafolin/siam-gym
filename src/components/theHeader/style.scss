@@ -1,4 +1,36 @@
 @import url("@/assets/scss/consts.scss");
 
 header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+
+  img.icon {
+    width: 3em;
+  }
+
+  div.menu-button {
+    height: 1rem;
+    span {
+      border: 1px solid black;
+      width: 2em;
+      display: block;
+      position: relative;
+      border-radius: 500px;
+
+      &:nth-child(2) {
+        top: 50%;
+      }
+
+      &:nth-child(3) {
+        top: 100%;
+      }
+    }
+  }
 }
