@@ -8,7 +8,7 @@ export const Footer = () => {
 		website: "https://www.gcomte.ch/fr/index.html"
 	}];
 
-	return <>
+	return <footer>
 		<section>
 			<p>Nos collaborateurs</p>
 			<ul>{
@@ -23,7 +23,7 @@ export const Footer = () => {
 		<section>
 			<p>&copy; 2023 <a href="https://drafolin.ch">Odin Beuchat</a></p>
 		</section>
-	</>;
+	</footer>;
 };
 
 export default Footer;
