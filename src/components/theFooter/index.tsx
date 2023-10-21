@@ -1,5 +1,5 @@
 import "./style.scss";
-import Comte from "@/assets/Comte.svg";
+import Comte from "@/assets/images/Comte.svg";
 
 export const Footer = () => {
 	const sponsors = [{
