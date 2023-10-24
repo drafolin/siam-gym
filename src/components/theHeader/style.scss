@@ -24,6 +24,10 @@ header {
       position: relative;
       border-radius: 500px;
 
+      @media screen and (prefers-color-scheme: dark) {
+        border-color: #fff;
+      }
+
       &:nth-child(2) {
         top: 50%;
       }
