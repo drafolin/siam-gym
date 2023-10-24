@@ -462,14 +462,17 @@ h1 {
 }
 
 a {
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: none;
   transition: all 300ms ease-in;
+  border-radius: .5em;
+  margin: 4px;
 
   &:hover {
-    text-decoration: underline;
     color: var(--text);
     transition: all 300ms ease-out;
+    background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+    box-shadow: 0 0 4px 4px color-mix(in srgb, var(--accent) 10%, transparent);
   }
 }
 

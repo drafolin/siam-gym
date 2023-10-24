@@ -9,8 +9,10 @@ export const Footer = () => {
 		website: "https://www.gcomte.ch/fr/index.html"
 	}];
 
+	const currentYear = new Date().getFullYear();
+
 	return <footer>
-		<section>
+		<section className="sponsors">
 			<p>Nos collaborateurs</p>
 			<ul>{
 				sponsors.map(v =>
@@ -25,8 +27,8 @@ export const Footer = () => {
 					</li>)
 			}</ul>
 		</section>
-		<section>
-			<p>&copy; 2023 <a href="https://drafolin.ch">Odin Beuchat</a></p>
+		<section className="copyright">
+			<p>&copy; 2023{currentYear !== 2023 ? "-{currentYear}" : ""} <a href="https://drafolin.ch">Odin Beuchat</a></p>
 		</section>
 	</footer>;
 };

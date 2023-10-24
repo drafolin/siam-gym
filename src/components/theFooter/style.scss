@@ -2,6 +2,7 @@ footer {
 	width: 100vw;
 	color: var(--gray);
 	background-color: var(--secondary);
+
 	svg, svg * {
 		stroke: var(color);
 		fill: var(color);
@@ -23,23 +24,30 @@ footer {
 			width: fit-content;
 		}
 
-		ul {
-			list-style: none;
-			display: grid;
-			padding: 0;
-			margin: 0;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+		&.sponsors {
+			ul {
+				list-style: none;
+				display: grid;
+				padding: 0;
+				margin: 0;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
 
-			li {
-				&:nth-child(even) {
-					grid-column: 3 / 5;
-				}
+				li {
+					a {
+						display: block;
+						width: fit-content;
+						height: fit-content;
+					}
+					&:nth-child(even) {
+						grid-column: 3 / 5;
+					}
 
-				&:nth-child(odd) {
-					grid-column: 1 / 3;
+					&:nth-child(odd) {
+						grid-column: 1 / 3;
 
-					&:last-child {
-						grid-column: 2 / 4;
+						&:last-child {
+							grid-column: 2 / 4;
+						}
 					}
 				}
 			}
