@@ -441,6 +441,10 @@ html {
 }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --text: #040404;
   --bg: #FEFEFE;
@@ -456,8 +460,13 @@ html {
   }
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
+  width: 100%;
+  text-align: center;
   font-family: SFRounded, sans-serif;
+}
+
+h1 {
   font-size: 3rem;
 }
 
