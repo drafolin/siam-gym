@@ -7,6 +7,7 @@ import {
 	createBrowserRouter,
 	RouterProvider,
 } from "react-router-dom";
+import "normalize.css";
 
 const router = createBrowserRouter([
 	{
