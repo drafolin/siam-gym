@@ -447,11 +447,12 @@ html {
   --primary: #CE321B;
   --secondary: #C5C5C5;
   --accent: #FF6955;
-  --dark-gray: #747474;
+  --gray: #747474;
 
   @media screen and (prefers-color-scheme: dark) {
     --text: #FBFBFB;
     --bg: #020617;
+    --secondary: #3f3f3f;
   }
 }
 
