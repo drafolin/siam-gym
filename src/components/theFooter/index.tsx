@@ -1,9 +1,10 @@
 import "./style.scss";
-import Comte from "@/assets/images/Comte.svg";
+import Comte from "@/assets/images/Comte.svg?react"
+import {ReactElement} from "react";
 
 export const Footer = () => {
-	const sponsors = [{
-		image: Comte,
+	const sponsors: { image: ReactElement | string; website: string; name: string }[] = [{
+		image: <Comte/>,
 		name: "Comte - Bâtiments et génie civil",
 		website: "https://www.gcomte.ch/fr/index.html"
 	}];
@@ -15,7 +16,11 @@ export const Footer = () => {
 				sponsors.map(v =>
 					<li>
 						<a href={v.website}>
-							<img src={v.image} alt={v.name} />
+							{
+								typeof v.image === "string" ?
+									<img src={v.image} alt={v.name} />:
+									v.image
+							}
 						</a>
 					</li>)
 			}</ul>
