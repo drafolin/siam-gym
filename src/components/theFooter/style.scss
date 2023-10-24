@@ -1,16 +1,14 @@
-@import "@/assets/scss/consts.scss";
-
 footer {
 	width: 100vw;
-	color: $dark-gray;
-	background-color: $secondary;
+	color: var(--dark-gray);
+	background-color: var(--secondary);
 
 	section {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		border-bottom: 1px solid $dark-gray;
+		border-bottom: 1px solid var(--dark-gray);
 		padding: 1.5em 0;
 
 		p {
