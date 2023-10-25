@@ -1,8 +1,34 @@
 import './index.scss';
 import clubIcon from '@/assets/images/icon.png';
 import DropDown from '@/components/DropDown';
+import { useState } from "react";
 
 export const Component = () => {
+	const [prestations, setPrestations] = useState([
+		{
+			title: "Boxe thaïlandaise",
+			details: ["Enfants et adultes", "Tous niveaux"],
+			isDeployed: false
+		},
+		{
+			title: "Boxe anglaise",
+			details: ["Tous niveaux"],
+			isDeployed: false
+		},
+		{
+			title: "Circuit training",
+			details: ["Renforcement musculaire", "Cardio"],
+			isDeployed: false
+		},
+		{
+			title: "Coaching privé",
+			details: ["Programme d’entraînement personnalisé", "Préparation physique"],
+			isDeployed: false
+		}
+	]);
+
+	console.log(prestations);
+
 	return (
 		<main>
 			<section className="intro">
@@ -13,33 +39,21 @@ export const Component = () => {
 			<section className="offers">
 				<h2>Nos prestations</h2>
 				<ul>
-					<li>
-						<DropDown title={"Boxe thaïlandaise"}>
-							<ul>
-								<li>Enfants et adultes</li>
-								<li>Tous niveaux</li>
-							</ul>
-						</DropDown>
-					</li>
-					<li>
-						<DropDown title={"Boxe anglaise"}>
-							<ul>
-								<li>Tous niveaux</li>
-							</ul>
-						</DropDown>
-					</li>
-					<li>
-						<DropDown title="Circuit training"><ul>
-							<li>Renforcement musculaire</li>
-							<li>Cardio</li>
-						</ul></DropDown>
-					</li>
-					<li>
-						<DropDown title="Coaching privé"><ul>
-							<li>Programme d’entraînement personnalisé</li>
-							<li>Préparation physique</li>
-						</ul></DropDown>
-					</li>
+					{
+						prestations.map((prestation, index) => {
+							return <li onClick={() => {
+								const newPrestations = [...prestations];
+								newPrestations[index].isDeployed = !prestation.isDeployed;
+								setPrestations([...newPrestations]);
+							}}>
+								<DropDown title={prestation.title} deploy={prestation.isDeployed}>
+									<ul>
+										{prestation.details.map((detail) => <li>{detail}</li>)}
+									</ul>
+								</DropDown>
+							</li>;
+						})
+					}
 				</ul>
 			</section>
 		</main>

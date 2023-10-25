@@ -4,17 +4,19 @@ import ChevronRight from "@/assets/images/chevron.right.svg";
 import "./style.scss";
 
 
-const MyComponent: FunctionComponent<{ title: JSX.Element, children: JSX.Element; }> = ({ title, children }) => {
+const MyComponent: FunctionComponent<{ title: JSX.Element, children: JSX.Element, deploy: boolean | null; }> = ({ title, children, deploy }) => {
 	const [isDeployed, setIsDeployed] = useState(false);
+
+	const shouldBeDeployed = () => deploy ?? isDeployed;
 
 	return (
 		<div className="Cstm__DD">
-			<button onClick={() => setIsDeployed(!isDeployed)} className="header">
+			<button onClick={() => deploy ?? setIsDeployed(!isDeployed)} className="header">
 				<div className="title">{title}</div>
-				<img className={`arrow ${isDeployed ? 'rotated' : ''}`} src={ChevronRight} />
+				<img className={`arrow ${shouldBeDeployed() ? 'rotated' : ''}`} src={ChevronRight} />
 			</button>
 			<CSSTransition
-				in={isDeployed}
+				in={shouldBeDeployed()}
 				timeout={350}
 				classNames="display"
 				unmountOnExit>
