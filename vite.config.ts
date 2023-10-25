@@ -8,7 +8,7 @@ export default defineConfig({
 	plugins: [react(), svgr()],
 	resolve: {
 		alias: {
-			"~/*": "/src",
+			"~": "/src",
 		}
 	},
 	server: {
