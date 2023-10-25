@@ -1,5 +1,6 @@
 import './index.scss';
 import clubIcon from '@/assets/images/icon.png';
+import DropDown from '@/components/DropDown';
 
 export const Component = () => {
 	return (
@@ -12,16 +13,33 @@ export const Component = () => {
 			<section className="offers">
 				<h2>Nos prestations</h2>
 				<ul>
-					<li>Boxe thaïlandaise (tous niveaux)</li>
-					<li>Boxe thaïlandaise (enfants)</li>
-					<li>Boxe anglaise (tous niveaux)</li>
-					<li>Circuit training <ul>
-						<li>Renforcement musculaire</li>
-						<li>Cardio</li>
-					</ul></li>
-					<li>Coaching privé</li>
-					<li>Programme d’entraînement personnalisé</li>
-					<li>Préparation physique</li>
+					<li>
+						<DropDown title={"Boxe thaïlandaise"}>
+							<ul>
+								<li>Enfants et adultes</li>
+								<li>Tous niveaux</li>
+							</ul>
+						</DropDown>
+					</li>
+					<li>
+						<DropDown title={"Boxe anglaise"}>
+							<ul>
+								<li>Tous niveaux</li>
+							</ul>
+						</DropDown>
+					</li>
+					<li>
+						<DropDown title="Circuit training"><ul>
+							<li>Renforcement musculaire</li>
+							<li>Cardio</li>
+						</ul></DropDown>
+					</li>
+					<li>
+						<DropDown title="Coaching privé"><ul>
+							<li>Programme d’entraînement personnalisé</li>
+							<li>Préparation physique</li>
+						</ul></DropDown>
+					</li>
 				</ul>
 			</section>
 		</main>
