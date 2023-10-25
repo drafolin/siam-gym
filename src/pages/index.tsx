@@ -56,6 +56,10 @@ export const Component = () => {
 					}
 				</ul>
 			</section>
+			<section className="gallery">
+				<h2>Gallerie</h2>
+				<div>A venir!</div>
+			</section>
 			<section className="map">
 				<h2>Nous trouver</h2>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.952958896194!2d32.84722288916753!3d39.87529159812883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3459d407069d3%3A0x671be8e4dd107347!2sLorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit!5e0!3m2!1sen!2sch!4v1698263414334!5m2!1sen!2sch" loading="lazy"></iframe>
