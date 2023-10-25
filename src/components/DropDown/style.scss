@@ -1,0 +1,42 @@
+.Cstm__DD {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: var(--text);
+    font-weight: bold;
+    width: 100%;
+
+    .arrow {
+      transition: transform 300ms ease-in-out;
+
+      &.rotated {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .display-enter {
+    height: 0;
+    opacity: 0;
+  }
+
+  .display-enter-active {
+    height: fit-content;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+  }
+
+  .display-exit {
+    height: fit-content;
+    opacity: 1;
+  }
+
+  .display-exit-active {
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+  }
+}
