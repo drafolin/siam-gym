@@ -455,6 +455,7 @@ html {
 :root {
   --text: #040404;
   --bg: #fefefe;
+  --secondary-bg: #dfdfdf;
   --primary: #ce321b;
   --secondary: #c5c5c5;
   --accent: #ff6955;
@@ -462,7 +463,8 @@ html {
 
   @media screen and (prefers-color-scheme: dark) {
     --text: #fbfbfb;
-    --bg: #020617;
+    --bg: #141414;
+    --secondary-bg: #191919;
     --secondary: #3f3f3f;
   }
 }
@@ -523,10 +525,19 @@ body {
       &:nth-child(even) {
         box-shadow: inset 0 12px 10px -12px var(--gray),
           inset 0 -12px 10px -12px var(--gray);
+        background-color: var(--secondary-bg);
+
+        @media screen and (prefers-color-scheme: dark) {
+          box-shadow: none;
+        }
       }
 
       &:nth-child(odd) {
         box-shadow: 0 0 10px var(--gray);
+
+        @media screen and (prefers-color-scheme: dark) {
+          box-shadow: none;
+        }
       }
     }
   }

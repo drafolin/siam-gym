@@ -8,9 +8,10 @@ header {
   padding: 1.5em;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg);
+  background-color: var(--primary);
   box-shadow: 0 0 4px var(--secondary);
   height: 100px;
+  z-index: 2;
 
   img.icon {
     width: 3em;
@@ -19,15 +20,11 @@ header {
   div.menu-button {
     height: 1rem;
     span {
-      border: 1px solid black;
+      border: 1px solid white;
       width: 2em;
       display: block;
       position: relative;
       border-radius: 500px;
-
-      @media screen and (prefers-color-scheme: dark) {
-        border-color: #fff;
-      }
 
       &:nth-child(2) {
         top: 50%;
