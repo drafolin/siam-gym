@@ -4,7 +4,7 @@ import ChevronRight from "~/assets/images/chevron.right.svg";
 import "./style.scss";
 
 
-const MyComponent: FunctionComponent<{ title: React.ReactNode, children: React.ReactNode, deploy: boolean | null; }> = ({ title, children, deploy }) => {
+const Component: FunctionComponent<{ title: React.ReactNode, children: React.ReactNode, deploy: boolean | null; }> = ({ title, children, deploy }) => {
 	const [isDeployed, setIsDeployed] = useState(false);
 
 	const shouldBeDeployed = () => deploy ?? isDeployed;
@@ -13,7 +13,7 @@ const MyComponent: FunctionComponent<{ title: React.ReactNode, children: React.R
 		<div className="Cstm__DD">
 			<button onClick={() => deploy ?? setIsDeployed(!isDeployed)} className="header">
 				<div className="title">{title}</div>
-				<img className={`arrow ${shouldBeDeployed() ? 'rotated' : ''}`} src={ChevronRight} />
+				<img className={`dark-invert arrow ${shouldBeDeployed() ? 'rotated' : ''}`} src={ChevronRight} />
 			</button>
 			<CSSTransition
 				in={shouldBeDeployed()}
@@ -26,4 +26,4 @@ const MyComponent: FunctionComponent<{ title: React.ReactNode, children: React.R
 	);
 };
 
-export default MyComponent;
+export default Component;
