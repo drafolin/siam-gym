@@ -56,6 +56,10 @@ export const Component = () => {
 					}
 				</ul>
 			</section>
+			<section className="map">
+				<h2>Nous trouver</h2>
+				<span>Arrive bientôt!</span>
+			</section>
 		</main>
 	);
 };
