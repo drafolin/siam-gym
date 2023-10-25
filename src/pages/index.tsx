@@ -1,6 +1,6 @@
 import './index.scss';
-import clubIcon from '@/assets/images/icon.png';
-import DropDown from '@/components/DropDown';
+import clubIcon from '~/assets/images/icon.png';
+import DropDown from '~/components/DropDown/index';
 import { useState } from "react";
 
 export const Component = () => {

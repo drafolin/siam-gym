@@ -1,10 +1,10 @@
-import { FunctionComponent, JSX, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import ChevronRight from "@/assets/images/chevron.right.svg";
 import "./style.scss";
 
 
-const MyComponent: FunctionComponent<{ title: JSX.Element, children: JSX.Element, deploy: boolean | null; }> = ({ title, children, deploy }) => {
+const MyComponent: FunctionComponent<{ title: React.ReactNode, children: React.ReactNode, deploy: boolean | null; }> = ({ title, children, deploy }) => {
 	const [isDeployed, setIsDeployed] = useState(false);
 
 	const shouldBeDeployed = () => deploy ?? isDeployed;
