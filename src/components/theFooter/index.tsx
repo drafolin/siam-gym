@@ -1,10 +1,10 @@
 import "./style.scss";
-import Comte from "@/assets/images/Comte.svg?react"
-import {ReactElement} from "react";
+import Comte from "~/assets/images/Comte.svg?react";
+import { ReactElement } from "react";
 
 export const Footer = () => {
-	const sponsors: { image: ReactElement | string; website: string; name: string }[] = [{
-		image: <Comte/>,
+	const sponsors: { image: ReactElement | string; website: string; name: string; }[] = [{
+		image: <Comte />,
 		name: "Comte - Bâtiments et génie civil",
 		website: "https://www.gcomte.ch/fr/index.html"
 	}];
@@ -20,7 +20,7 @@ export const Footer = () => {
 						<a href={v.website}>
 							{
 								typeof v.image === "string" ?
-									<img src={v.image} alt={v.name} />:
+									<img src={v.image} alt={v.name} /> :
 									v.image
 							}
 						</a>

@@ -1,6 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import ChevronRight from "@/assets/images/chevron.right.svg";
+import ChevronRight from "~/assets/images/chevron.right.svg";
 import "./style.scss";
 
 

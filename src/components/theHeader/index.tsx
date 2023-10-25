@@ -1,4 +1,4 @@
-import clubIcon from "@/assets/images/icon.png";
+import clubIcon from "~/assets/images/icon.png";
 import "./style.scss";
 
 export const Component = () => {
