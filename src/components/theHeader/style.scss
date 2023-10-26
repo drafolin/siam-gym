@@ -93,11 +93,15 @@ header {
       &:nth-child(1) {
         transform: translateY(-0.5em);
 
-        &.opened {
+        &.opening {
           animation: bar-1 300ms ease-in-out both;
         }
 
-        &.closed {
+        &.open {
+          transform: rotate(45deg);
+        }
+
+        &.closing {
           animation: bar-1 300ms ease-in-out both reverse;
         }
       }
@@ -105,11 +109,15 @@ header {
       &:nth-child(2) {
         transform: translateY(0em);
 
-        &.opened {
+        &.opening {
           animation: bar-2 300ms ease-in-out both;
         }
 
-        &.closed {
+        &.open {
+          transform: rotate(45deg);
+        }
+
+        &.closing {
           animation: bar-2 300ms ease-in-out both reverse;
         }
       }
@@ -117,11 +125,15 @@ header {
       &:nth-child(3) {
         transform: translateY(0.5em);
 
-        &.opened {
+        &.opening {
           animation: bar-3 300ms ease-in-out both;
         }
 
-        &.closed {
+        &.open {
+          transform: rotate(135deg);
+        }
+
+        &.closing {
           animation: bar-3 300ms ease-in-out both reverse;
         }
       }
