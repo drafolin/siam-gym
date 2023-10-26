@@ -27,8 +27,6 @@ export const Component = () => {
 		}
 	]);
 
-	console.log(prestations);
-
 	return (
 		<main>
 			<section className="intro">
@@ -45,10 +43,10 @@ export const Component = () => {
 								const newPrestations = [...prestations];
 								newPrestations[index].isDeployed = !prestation.isDeployed;
 								setPrestations([...newPrestations]);
-							}}>
+							}} key={index}>
 								<DropDown title={prestation.title} deploy={prestation.isDeployed}>
 									<ul>
-										{prestation.details.map((detail) => <li>{detail}</li>)}
+										{prestation.details.map((detail, index) => <li key={index}>{detail}</li>)}
 									</ul>
 								</DropDown>
 							</li>;
