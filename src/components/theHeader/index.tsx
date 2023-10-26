@@ -7,8 +7,18 @@ import { CSSTransition } from "react-transition-group";
 
 export const Component = () => {
 	const size = useSize(document.body);
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState<boolean | null>(null);
+	const [currentMenuState, setCurrentMenuState] = useState<boolean>(false);
 	const isBigScreen = () => ((size?.width ?? 0) > 768);
+
+	const toggleMenu = () => {
+		console.log("toggleMenu");
+		setIsMenuOpen(null);
+		requestAnimationFrame(() => {
+			setIsMenuOpen(!currentMenuState);
+			setCurrentMenuState(!currentMenuState);
+		});
+	};
 
 	return <>
 		<header>
@@ -21,21 +31,21 @@ export const Component = () => {
 						</li>
 					</ul>
 				</nav> :
-				<div className="menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-					<span />
-					<span />
-					<span />
+				<div className="menu-button" onClick={toggleMenu}>
+					<span className={isMenuOpen === null ? "" : isMenuOpen ? "opened" : "closed"} />
+					<span className={isMenuOpen === null ? "" : isMenuOpen ? "opened" : "closed"} />
+					<span className={isMenuOpen === null ? "" : isMenuOpen ? "opened" : "closed"} />
 				</div>}
 		</header>
 		<CSSTransition
-			in={!isBigScreen() && isMenuOpen}
+			in={!isBigScreen() && currentMenuState}
 			timeout={350}
 			classNames="menu"
 			unmountOnExit>
 			<nav className="menu">
 				<ul>
 					<li>
-						<Link to="/" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
+						<Link to="/" onClick={toggleMenu}>Accueil</Link>
 					</li>
 				</ul>
 			</nav>
