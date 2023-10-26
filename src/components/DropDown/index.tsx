@@ -1,6 +1,5 @@
 import { FunctionComponent, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import ChevronRight from "~/assets/images/chevron.right.svg";
 import "./style.scss";
 
 
@@ -13,7 +12,7 @@ const Component: FunctionComponent<{ title: React.ReactNode, children: React.Rea
 		<div className="Cstm__DD">
 			<button onClick={() => deploy ?? setIsDeployed(!isDeployed)} className="header">
 				<div className="title">{title}</div>
-				<img className={`dark-invert arrow ${shouldBeDeployed() ? 'rotated' : ''}`} src={ChevronRight} />
+				<span className={`symbol arrow ${shouldBeDeployed() ? 'rotated' : ''}`}>&#1051643;</span>
 			</button>
 			<CSSTransition
 				in={shouldBeDeployed()}
