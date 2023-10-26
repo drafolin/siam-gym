@@ -35,7 +35,7 @@ export const Component = () => {
 			<nav className="menu">
 				<ul>
 					<li>
-						<Link to="/">Accueil</Link>
+						<Link to="/" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
 					</li>
 				</ul>
 			</nav>
