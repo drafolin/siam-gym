@@ -40,16 +40,24 @@ export const Component = () => {
 		}
 	};
 
+	const menuLinks = [
+		{
+			name: "Accueil",
+			path: "/"
+		}
+	];
+
 	return <>
 		<header>
 			<img src={clubIcon} className="icon" alt="L'icône du club" />
 			{isBigScreen() ?
 				<nav>
-					<ul>
-						<li>
-							<Link to="/">Accueil</Link>
-						</li>
-					</ul>
+					<ul>{
+						menuLinks.map((v, i) =>
+							<li key={i}>
+								<Link to={v.path}>{v.name}</Link>
+							</li>)
+					}</ul>
 				</nav> :
 				<div className="menu-button" onClick={toggleMenu}>
 					<span className={
@@ -78,11 +86,12 @@ export const Component = () => {
 			classNames="menu"
 			unmountOnExit>
 			<nav className="menu">
-				<ul>
-					<li>
-						<Link to="/" onClick={toggleMenu}>Accueil</Link>
-					</li>
-				</ul>
+				<ul>{
+					menuLinks.map((v, i) =>
+						<li key={i}>
+							<Link to={v.path}>{v.name}</Link>
+						</li>)
+				}</ul>
 			</nav>
 		</CSSTransition>
 	</>;
