@@ -8,7 +8,7 @@ export const Component = () => {
 
 	return <header>
 		<img src={clubIcon} className="icon" alt="L'icône du club" />
-		{(size?.width ?? 0 > 1200) ?
+		{((size?.width ?? 0) > 768) ?
 			<nav>
 				<ul>
 					<li>
