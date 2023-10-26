@@ -37,8 +37,8 @@ export const Footer = () => {
 		<section className="sponsors">
 			<p>Nos collaborateurs</p>
 			<ul>{
-				sponsors.map(v =>
-					<li>
+				sponsors.map((v, i) =>
+					<li key={i}>
 						<a href={v.website}>
 							{
 								typeof v.image === "string" ?
