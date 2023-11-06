@@ -456,7 +456,7 @@ html {
   --text: #040404;
   --bg: #fefefe;
   --secondary-bg: #dfdfdf;
-  --global-bg: #f5f5f5;
+  --global-bg: var(--bg);
   --primary: #ce321b;
   --secondary: #c5c5c5;
   --accent: #ff6955;
