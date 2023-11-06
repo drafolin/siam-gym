@@ -520,6 +520,10 @@ body {
   main {
     max-width: 1200px;
     margin: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+    display: grid;
+    grid-auto-columns: auto;
 
     section {
       display: flex;
