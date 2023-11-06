@@ -95,7 +95,7 @@ export const Component = () => {
 				<ul>{
 					menuLinks.map((v, i) =>
 						<li key={i}>
-							<Link to={v.path}>{v.name}</Link>
+							<Link onClick={toggleMenu} to={v.path}>{v.name}</Link>
 						</li>)
 				}</ul>
 			</nav>
