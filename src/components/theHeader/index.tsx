@@ -44,12 +44,18 @@ export const Component = () => {
 		{
 			name: "Accueil",
 			path: "/"
+		},
+		{
+			name: "Cours",
+			path: "/cours"
 		}
 	];
 
 	return <>
 		<header>
-			<img src={clubIcon} className="icon" alt="L'icône du club" />
+			<Link to="/">
+				<img src={clubIcon} className="icon" alt="L'icône du club" />
+			</Link>
 			{isBigScreen() ?
 				<nav>
 					<ul>{
