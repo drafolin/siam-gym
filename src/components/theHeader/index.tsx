@@ -53,7 +53,9 @@ export const Component = () => {
 
 	return <>
 		<header>
-			<img src={clubIcon} className="icon" alt="L'icône du club" />
+			<Link to="/">
+				<img src={clubIcon} className="icon" alt="L'icône du club" />
+			</Link>
 			{isBigScreen() ?
 				<nav>
 					<ul>{
