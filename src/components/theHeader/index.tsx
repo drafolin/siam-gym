@@ -44,6 +44,10 @@ export const Component = () => {
 		{
 			name: "Accueil",
 			path: "/"
+		},
+		{
+			name: "Cours",
+			path: "/cours"
 		}
 	];
 
