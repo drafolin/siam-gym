@@ -506,7 +506,42 @@ a {
 }
 
 .symbol {
-  font-family: "SFRounded";
+  font-family: "SFRounded", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 1.1rem;
+
+  thead {
+    th {
+      padding: .75em;
+    }
+  }
+
+  tbody {
+
+    tr {
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        background-color: var(--secondary-bg);
+      }
+
+      td {
+        border-top: 1px solid var(--secondary);
+        padding: .75em;
+
+        &:first-child {
+          font-weight: bold;
+        }
+
+        &:not(:first-child) {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 body {
@@ -525,7 +560,7 @@ body {
     display: grid;
     grid-auto-columns: auto;
 
-    section {
+    >section {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -533,6 +568,16 @@ body {
       clip-path: inset(0px 0px 0px 0px);
       border-left: 1px solid var(--secondary-bg);
       border-right: 1px solid var(--secondary-bg);
+
+      >* {
+        width: 80%;
+        max-width: 600px;
+
+        &.full-width {
+          max-width: unset;
+          width: 100%;
+        }
+      }
 
       &:first-child {
         border-top: 1px solid var(--secondary-bg);

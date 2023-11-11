@@ -15,7 +15,7 @@ enum MenuState {
 export const Component = () => {
 	const size = useSize(document.body);
 	const [menuState, setMenuState] = useState<MenuState>(MenuState.CLOSED);
-	const animation = useRef<number | null>(null);
+	const animation = useRef<NodeJS.Timeout | null>(null);
 	const isBigScreen = () => ((size?.width ?? 0) > 768);
 
 	const toggleMenu = () => {
