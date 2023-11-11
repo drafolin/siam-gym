@@ -572,6 +572,11 @@ body {
       >* {
         width: 80%;
         max-width: 600px;
+
+        &.full-width {
+          max-width: unset;
+          width: 100%;
+        }
       }
 
       &:first-child {
