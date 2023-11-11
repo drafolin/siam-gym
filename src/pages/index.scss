@@ -4,6 +4,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
 
       img {
         margin: 1em;
@@ -56,6 +57,7 @@ main {
     }
 
     &.gallery {
+      text-align: center;
     }
 
     &.map {

@@ -9,5 +9,27 @@ main.page-cours {
       color: white;
       justify-content: center;
     }
+
+    &.prices {
+      .subs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+
+        section {
+          width: fit-content;
+
+          &:last-child:nth-child(odd) {
+            grid-column: 2 / 4;
+          }
+        }
+      }
+
+      p {
+        @media screen and (min-width: 750px) {
+          text-align: center;
+        }
+      }
+    }
   }
 }
