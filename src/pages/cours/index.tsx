@@ -34,10 +34,42 @@ export const Page = () => {
 					<tr>
 						<td>Adulte</td>
 						<td>65.-</td>
-						<td>50.-/mois</td>
+						<td>60.-/mois</td>
 					</tr>
 				</tbody>
 			</table>
+
+			{/*
+			<hr/>
+			<h3>Full access</h3>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>1 mois</th>
+						<th>dès 3 mois</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Enfant</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Etudiant</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Adulte</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			*/}
 		</section>
 	</main>;
 };
