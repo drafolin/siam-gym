@@ -11,7 +11,33 @@ export const Page = () => {
 		</section>
 		<section>
 			<h2>Les tarifs</h2>
-			<table></table>
+			<h3>Une discipline</h3>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>1 mois</th>
+						<th>dès 3 mois</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Enfant</td>
+						<td>20.-</td>
+						<td>20.-/mois</td>
+					</tr>
+					<tr>
+						<td>Etudiant</td>
+						<td>55.-</td>
+						<td>50.-/mois</td>
+					</tr>
+					<tr>
+						<td>Adulte</td>
+						<td>65.-</td>
+						<td>50.-/mois</td>
+					</tr>
+				</tbody>
+			</table>
 		</section>
 	</main>;
 };
