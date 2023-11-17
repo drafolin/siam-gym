@@ -22,7 +22,7 @@ export const Component = () => {
 		},
 		{
 			title: "Coaching privé",
-			details: ["Programme d’entraînement personnalisé", "Préparation physique", "Coaching d'équipe"],
+			details: ["Programme d’entraînement personnalisé", "Préparation physique", "Personnel ou équipe"],
 			isDeployed: false
 		}
 	]);
