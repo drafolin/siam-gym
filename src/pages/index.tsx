@@ -7,7 +7,7 @@ export const Component = () => {
 	const [prestations, setPrestations] = useState([
 		{
 			title: "Boxe thaïlandaise",
-			details: ["Enfants et adultes", "Tous niveaux"],
+			details: ["Enfants", "Adultes (débutants - avancés)"],
 			isDeployed: false
 		},
 		{
@@ -22,7 +22,7 @@ export const Component = () => {
 		},
 		{
 			title: "Coaching privé",
-			details: ["Programme d’entraînement personnalisé", "Préparation physique"],
+			details: ["Programme d’entraînement personnalisé", "Préparation physique", "Personnel ou équipe"],
 			isDeployed: false
 		}
 	]);
