@@ -75,7 +75,7 @@ export const Page = () => {
 
 			*/}
             </div>
-			<h3>Cours individuels</h3>
+			<h3>Cours uniques</h3>
 			<p>
 			Vous pouvez participer à un seul cours pour le prix de 10.- par cours.
 			</p>
