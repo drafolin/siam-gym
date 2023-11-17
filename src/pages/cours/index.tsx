@@ -11,7 +11,7 @@ export const Page = () => {
         </section>
         <section className="prices">
             <h2>Les tarifs</h2>
-			<h3>Nos abonnements</h3>
+            <h3>Nos abonnements</h3>
             <div className="subs">
                 <section>
                     <h4>Une discipline</h4>
@@ -75,14 +75,18 @@ export const Page = () => {
 
 			*/}
             </div>
-			<h3>Cours uniques</h3>
-			<p>
-			Vous pouvez participer à un seul cours pour le prix de 10.- par cours.
-			</p>
-			<p>
-			Si vous souhaitez participer à plusieurs cours, nous offrons des cartes
-			de fidélité, qui offrent une réduction de 10.- sur une tranche de 10 cours.
-			</p>
+            <h3>Cours uniques</h3>
+            <p>
+                Vous pouvez participer à un seul cours pour le prix de 10.- par cours.
+            </p>
+            <h3>Carte multicours</h3>
+            <p>
+                Si vous souhaitez participer à plusieurs cours, nous offrons des cartes
+                de fidélité, qui offrent une réduction de 10.- sur une tranche de 10 cours.
+            </p>
+            <p>
+                Ainsi, vous payez 90.- pour 10 cours.
+            </p>
         </section>
     </main>;
 };
