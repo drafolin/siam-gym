@@ -88,6 +88,14 @@ export const Page = () => {
                 Ainsi, vous payez 90.- pour 10 cours.
             </p>
         </section>
+        <section>
+            <h2>Cours sur demande</h2>
+            <ul>
+                <li>Coaching privé ou équipe</li>
+                <li>Programme d'entraînement personnalisé</li>
+                <li>Préparation physique complète</li>
+            </ul>
+        </section>
     </main>;
 };
 

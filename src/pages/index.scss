@@ -20,31 +20,28 @@ main {
         width: 80%;
 
         li {
+          margin: 0;
           padding: 1.25em 0;
-
-          ul {
-            list-style: circle;
-            padding-left: 2em;
-
-            li {
-              margin: 0.75em 0;
-              padding: 0;
-
-              &:not(:last-child) {
-                border-bottom: none;
-              }
-
-              &:last-child {
-                margin-bottom: 0;
-              }
-            }
-          }
 
           &:not(:last-child) {
             border-bottom: 1px solid lightgray;
 
-            ul li {
-              border-bottom: none;
+            ul {
+              padding: 0 3em;
+              li {
+                margin: 0.75em 0;
+                padding: 0;
+                list-style: circle;
+
+                &:not(:last-child) {
+                  border-bottom: none;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                border-bottom: none;
+              }
             }
           }
 
