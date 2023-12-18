@@ -75,33 +75,38 @@ export const Page = () => {
             </div>
           </div>
           <div className="w1">
-          <div className="price-table">
-            <h5>Offres multiples</h5>
-            <table>
-              <thead>
-              <tr>
-                <th></th>
-                <th>Dual</th>
-                <th>Dual Thaï</th>
-                <th>All-inclusive</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Etudiant</td>
-                <td>70.-/mois</td>
-                <td>80.-/mois</td>
-                <td>90.-/mois</td>
-              </tr>
-              <tr>
-                <td>Adulte</td>
-                <td>80.-/mois</td>
-                <td>90.-/mois</td>
-                <td>100.-/mois</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
+            <div className="price-table">
+              <h5>Offres multiples</h5>
+              <table>
+                <thead>
+                <tr>
+                  <th></th>
+                  <th>Dual</th>
+                  <th>Dual Thaï</th>
+                  <th>All-inclusive</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                  <td colSpan={4}>Prix mensuels</td>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                  <td>Etudiant</td>
+                  <td>70.-</td>
+                  <td>80.-</td>
+                  <td>90.-</td>
+                </tr>
+                <tr>
+                  <td>Adulte</td>
+                  <td>80.-</td>
+                  <td>90.-</td>
+                  <td>100.-</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
             <p>L'offre dual inclus deux disciplines, sauf Muay Thaï.</p>
             <p>L'offre dual thaï inclus le Muay Thaï et une autre discipline.</p>
             <p>L'offre all-inclusive inclus toutes les disciplines du club.</p>

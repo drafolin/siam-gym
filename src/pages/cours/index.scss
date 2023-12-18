@@ -17,6 +17,7 @@ main.page-cours {
         align-items: center;
         display: flex;
         flex-direction: column;
+        text-align: center;
 
         @media screen and (min-width: 750px) {
           display: grid;
@@ -28,7 +29,14 @@ main.page-cours {
           .price-table {
             display: flex;
             flex-direction: column;
-            margin-bottom: 2em;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            text-align: center;
+            width: 90%;
+          }
+
+          &>div:not(:last-child) {
+            border-bottom: 1px solid lightgray;
           }
           &:last-child:nth-child(odd) {
             grid-column: 2 / 4;
@@ -53,5 +61,16 @@ main.page-cours {
   .w1 {
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  table {
+    tfoot {
+      td {
+        text-align: right;
+        font-size: 12px;
+        padding: .5em;
+      }
+    }
   }
 }
