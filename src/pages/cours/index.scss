@@ -2,7 +2,7 @@ main.page-cours {
   section {
     &.intro {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("~/assets/images/cours.jpg");
+      url("~/assets/images/cours.jpg");
       min-height: 30em;
       background-position: center;
       background-size: cover;
@@ -25,6 +25,11 @@ main.page-cours {
         section {
           width: fit-content;
 
+          .price-table {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em;
+          }
           &:last-child:nth-child(odd) {
             grid-column: 2 / 4;
           }
@@ -37,5 +42,16 @@ main.page-cours {
         }
       }
     }
+  }
+
+  .w1-2h {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+
+  .w1 {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
