@@ -19,10 +19,6 @@ main.page-cours {
         flex-direction: column;
         text-align: center;
 
-        @media screen and (min-width: 750px) {
-          display: grid;
-        }
-
         section {
           width: fit-content;
 
@@ -38,8 +34,30 @@ main.page-cours {
           &>div:not(:last-child) {
             border-bottom: 1px solid lightgray;
           }
-          &:last-child:nth-child(odd) {
-            grid-column: 2 / 4;
+
+          @media screen and (min-width: 750px) {
+            display: grid;
+            border-collapse: collapse;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+            margin-bottom: 1em;
+            border-bottom: 1px solid lightgray;
+
+            &>div:not(:last-child) {
+              border-bottom: none !important;
+            }
+
+            &>:nth-child(odd) {
+              grid-column: 1 / 2;
+            }
+
+            &>:nth-child(even) {
+              grid-column: 2 / 3;
+            }
+
+            &>:last-child:nth-child(odd) {
+              grid-column: 1 / 3;
+            }
           }
         }
       }

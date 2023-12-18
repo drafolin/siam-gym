@@ -14,10 +14,9 @@ export const Page = () => {
       <h3>Nos abonnements</h3>
       <div className="subs">
         <section>
-          <h4>Abonnements</h4>
           <div className="w1">
             <div className="price-table">
-              <h5>Muay thaï</h5>
+              <h4>Muay thaï</h4>
               <p>4 cours par semaine</p>
               <table>
                 <thead>
@@ -49,7 +48,7 @@ export const Page = () => {
           </div>
           <div className="w1">
             <div className="price-table">
-              <h5>Boxe anglaise ou circuit training</h5>
+              <h4>Boxe anglaise ou circuit training</h4>
               <p>3 cours par semaine</p>
               <table>
                 <thead>
@@ -76,7 +75,7 @@ export const Page = () => {
           </div>
           <div className="w1">
             <div className="price-table">
-              <h5>Offres multiples</h5>
+              <h4>Offres multiples</h4>
               <table>
                 <thead>
                 <tr>
