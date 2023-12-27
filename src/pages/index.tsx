@@ -55,7 +55,7 @@ export const Component = () => {
         </ul>
       </section>
       <section className="gallery">
-        <h2>Gallerie</h2>
+        <h2>Galerie</h2>
         <div>A venir!</div>
       </section>
       <section className="map">
