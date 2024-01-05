@@ -1,4 +1,4 @@
-import clubIcon from "~/assets/images/icon.png";
+import clubIcon from "~/assets/images/icon.svg";
 import "./style.scss";
 import { useSize } from "ahooks";
 import { Link } from "react-router-dom";
@@ -54,7 +54,13 @@ export const Component = () => {
 	return <>
 		<header>
 			<Link to="/">
-				<img src={clubIcon} className="icon" alt="L'icône du club" />
+				<img
+					src={clubIcon}
+					width={48}
+					height={48}
+					className="icon"
+					alt="L'icône du club"
+				/>
 			</Link>
 			{isBigScreen() ?
 				<nav>

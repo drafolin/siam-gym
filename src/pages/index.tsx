@@ -1,5 +1,5 @@
 import './index.scss';
-import clubIcon from '~/assets/images/icon.png';
+import clubIcon from '~/assets/images/icon.svg';
 import DropDown from '~/components/DropDown/index';
 import { useState } from "react";
 
