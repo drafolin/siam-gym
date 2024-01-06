@@ -6,17 +6,16 @@ export const Page = () => {
       <h1>Nos cours</h1>
     </section>
     <section className="planning">
-      <h2>Les horaires</h2>
+      <h2>Horaires</h2>
       <table></table>
     </section>
     <section className="prices">
-      <h2>Les tarifs</h2>
-      <h3>Nos abonnements</h3>
+      <h2>Nos abonnements</h2>
       <div className="subs">
         <section>
           <div className="w1">
             <div className="price-table">
-              <h4>Muay thaï</h4>
+              <h3>Muay thaï</h3>
               <p>4 cours par semaine</p>
               <table>
                 <thead>
@@ -75,7 +74,7 @@ export const Page = () => {
           </div>
           <div className="w1">
             <div className="price-table">
-              <h4>Offres multiples</h4>
+              <h3>Offres multiples</h3>
               <table>
                 <thead>
                 <tr>
@@ -106,19 +105,21 @@ export const Page = () => {
                 </tbody>
               </table>
             </div>
-            <p>L'offre dual inclus deux disciplines, sauf Muay Thaï.</p>
-            <p>L'offre dual thaï inclus le Muay Thaï et une autre discipline.</p>
-            <p>L'offre all-inclusive inclus toutes les disciplines du club.</p>
+            <ul>
+              <li><strong>Dual</strong> inclus deux disciplines, sauf Muay Thaï.</li>
+              <li><strong>Dual thaï</strong> inclus le Muay Thaï et une autre discipline.</li>
+              <li><strong>All-inclusive</strong> inclus toutes les disciplines du club.</li>
+            </ul>
           </div>
         </section>
 
 
       </div>
-      <h3>Cours uniques</h3>
+      <h2>Cours uniques</h2>
       <p>
         Vous pouvez participer à un seul cours pour le prix de 10.- par cours.
       </p>
-      <h3>Carte multicours</h3>
+      <h2>Carte multicours</h2>
       <p>
         Si vous souhaitez participer à plusieurs cours, nous offrons des cartes
         de fidélité, qui offrent une réduction de 10.- sur une tranche de 10 cours.
