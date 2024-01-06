@@ -1,5 +1,5 @@
 import './index.scss';
-import clubIcon from '~/assets/images/icon.svg';
+import ClubIcon from '~/assets/images/icon.svg?react';
 import DropDown from '~/components/DropDown/index';
 import { useState } from "react";
 
@@ -30,7 +30,7 @@ export const Component = () => {
   return (
     <main>
       <section className="intro">
-        <img src={clubIcon} alt="Icône de Siam Gym"/>
+        <ClubIcon/>
         <p>Bienvenue au</p>
         <h1>SiamGym</h1>
       </section>

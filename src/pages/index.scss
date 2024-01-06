@@ -6,9 +6,11 @@ main {
       align-items: center;
       text-align: center;
 
-      img {
+      svg {
         margin: 1em;
         width: 40%;
+        height: auto;
+        aspect-ratio: 1;
         max-width: 256px;
       }
     }
