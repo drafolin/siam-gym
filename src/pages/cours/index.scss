@@ -29,13 +29,8 @@ main.page-cours {
             margin-bottom: 1em;
             max-width: 90%;
             width: fit-content;
-
-            .price-table-container {
-              padding-bottom: 1em;
-              text-align: center;
-              max-width: 100%;
-              overflow-x: auto;
-            }
+            padding-bottom: 1em;
+            text-align: center;
           }
 
           & > div:not(:last-child) {

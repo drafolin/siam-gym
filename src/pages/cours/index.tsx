@@ -1,50 +1,7 @@
 import "./index.scss";
-import { useEffect, useRef } from "react";
-import { useWindowScroll, useWindowSize } from "react-use";
+import ScrollView from "~/components/ScrollView";
 
 export const Page = () => {
-  const tableToScroll = useRef<null | HTMLDivElement>(null);
-  const windowScroll = useWindowScroll();
-  const windowSize = useWindowSize();
-  const tableAnimationData = useRef({
-    isFinished: false,
-    isGoingForward: true,
-    pauseCounter: 50,
-    isRunning: false
-  })
-
-
-  useEffect(() => {
-    const runAnimation = () => {
-      tableAnimationData.current!.isRunning = true;
-      if (tableToScroll.current!.scrollLeft === 0 && !tableAnimationData.current.isGoingForward) {
-        tableAnimationData.current.isFinished = true;
-      }
-
-      if (tableAnimationData.current.isFinished) {
-        return
-      }
-
-      if (tableAnimationData.current.isGoingForward) {
-        tableToScroll.current!.scrollBy(5, 0);
-      } else if (tableAnimationData.current.pauseCounter > 0) {
-        tableAnimationData.current.pauseCounter--;
-      } else {
-        tableToScroll.current!.scrollBy(-5, 0);
-      }
-
-      if (tableToScroll.current!.scrollLeft > tableToScroll.current!.scrollWidth - tableToScroll.current!.clientWidth - 2) {
-        tableAnimationData.current.isGoingForward = false;
-      }
-
-      requestAnimationFrame(runAnimation);
-    }
-    if (tableToScroll.current!.offsetTop < windowScroll.y + ( 2 / 3 ) * windowSize.height
-      && !tableAnimationData.current!.isRunning) {
-      runAnimation();
-    }
-  }, [windowScroll.y])
-
   return <main className="page-cours">
     <section className="intro">
       <h1>Nos cours</h1>
@@ -123,7 +80,7 @@ export const Page = () => {
           <div className="w1">
             <div className="price-table">
               <h3>Offres multiples</h3>
-              <div ref={tableToScroll} className="price-table-container">
+              <ScrollView>
                 <table>
                   <thead>
                   <tr>
@@ -153,7 +110,7 @@ export const Page = () => {
                   </tr>
                   </tbody>
                 </table>
-              </div>
+              </ScrollView>
             </div>
             <ul>
               <li><strong>Dual</strong> inclus deux disciplines, sauf Muay Thaï.</li>
@@ -162,8 +119,6 @@ export const Page = () => {
             </ul>
           </div>
         </section>
-
-
       </div>
       <h2>Cours uniques</h2>
       <p>
