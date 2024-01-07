@@ -25,13 +25,20 @@ main.page-cours {
           .price-table {
             display: flex;
             flex-direction: column;
+            align-items: center;
             margin-bottom: 1em;
-            padding-bottom: 1em;
-            text-align: center;
-            width: 90%;
+            max-width: 90%;
+            width: fit-content;
+
+            .price-table-container {
+              padding-bottom: 1em;
+              text-align: center;
+              max-width: 100%;
+              overflow-x: auto;
+            }
           }
 
-          &>div:not(:last-child) {
+          & > div:not(:last-child) {
             border-bottom: 1px solid lightgray;
           }
 
@@ -43,19 +50,19 @@ main.page-cours {
             margin-bottom: 1em;
             border-bottom: 1px solid lightgray;
 
-            &>div:not(:last-child) {
+            & > div:not(:last-child) {
               border-bottom: none !important;
             }
 
-            &>:nth-child(odd) {
+            & > :nth-child(odd) {
               grid-column: 1 / 2;
             }
 
-            &>:nth-child(even) {
+            & > :nth-child(even) {
               grid-column: 2 / 3;
             }
 
-            &>:last-child:nth-child(odd) {
+            & > :last-child:nth-child(odd) {
               grid-column: 1 / 3;
             }
           }

@@ -1,6 +1,50 @@
 import "./index.scss";
+import { useEffect, useRef } from "react";
+import { useWindowScroll, useWindowSize } from "react-use";
 
 export const Page = () => {
+  const tableToScroll = useRef<null | HTMLDivElement>(null);
+  const windowScroll = useWindowScroll();
+  const windowSize = useWindowSize();
+  const tableAnimationData = useRef({
+    isFinished: false,
+    isGoingForward: true,
+    pauseCounter: 50,
+    isRunning: false
+  })
+
+
+  useEffect(() => {
+    const runAnimation = () => {
+      tableAnimationData.current!.isRunning = true;
+      if (tableToScroll.current!.scrollLeft === 0 && !tableAnimationData.current.isGoingForward) {
+        tableAnimationData.current.isFinished = true;
+      }
+
+      if (tableAnimationData.current.isFinished) {
+        return
+      }
+
+      if (tableAnimationData.current.isGoingForward) {
+        tableToScroll.current!.scrollBy(5, 0);
+      } else if (tableAnimationData.current.pauseCounter > 0) {
+        tableAnimationData.current.pauseCounter--;
+      } else {
+        tableToScroll.current!.scrollBy(-5, 0);
+      }
+
+      if (tableToScroll.current!.scrollLeft > tableToScroll.current!.scrollWidth - tableToScroll.current!.clientWidth - 2) {
+        tableAnimationData.current.isGoingForward = false;
+      }
+
+      requestAnimationFrame(runAnimation);
+    }
+    if (tableToScroll.current!.offsetTop < windowScroll.y + ( 2 / 3 ) * windowSize.height
+      && !tableAnimationData.current!.isRunning) {
+      runAnimation();
+    }
+  }, [windowScroll.y])
+
   return <main className="page-cours">
     <section className="intro">
       <h1>Nos cours</h1>
@@ -17,93 +61,99 @@ export const Page = () => {
             <div className="price-table">
               <h3>Muay thaï</h3>
               <p>4 cours par semaine</p>
-              <table>
-                <thead>
-                <tr>
-                  <th></th>
-                  <th>1 mois</th>
-                  <th>3 mois</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Enfant</td>
-                  <td>20.-</td>
-                  <td>60.-</td>
-                </tr>
-                <tr>
-                  <td>Etudiant</td>
-                  <td>55.-</td>
-                  <td>150.-</td>
-                </tr>
-                <tr>
-                  <td>Adulte</td>
-                  <td>65.-</td>
-                  <td>180.-</td>
-                </tr>
-                </tbody>
-              </table>
+              <div className="price-table-container">
+                <table>
+                  <thead>
+                  <tr>
+                    <th></th>
+                    <th>1 mois</th>
+                    <th>3 mois</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Enfant</td>
+                    <td>20.-</td>
+                    <td>60.-</td>
+                  </tr>
+                  <tr>
+                    <td>Etudiant</td>
+                    <td>55.-</td>
+                    <td>150.-</td>
+                  </tr>
+                  <tr>
+                    <td>Adulte</td>
+                    <td>65.-</td>
+                    <td>180.-</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div className="w1">
             <div className="price-table">
               <h4>Boxe anglaise ou circuit training</h4>
               <p>3 cours par semaine</p>
-              <table>
-                <thead>
-                <tr>
-                  <th></th>
-                  <th>1 mois</th>
-                  <th>3 mois</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Etudiant</td>
-                  <td>45.-</td>
-                  <td>120.-</td>
-                </tr>
-                <tr>
-                  <td>Adulte</td>
-                  <td>55.-</td>
-                  <td>150.-</td>
-                </tr>
-                </tbody>
-              </table>
+              <div className="price-table-container">
+                <table>
+                  <thead>
+                  <tr>
+                    <th></th>
+                    <th>1 mois</th>
+                    <th>3 mois</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Etudiant</td>
+                    <td>45.-</td>
+                    <td>120.-</td>
+                  </tr>
+                  <tr>
+                    <td>Adulte</td>
+                    <td>55.-</td>
+                    <td>150.-</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div className="w1">
             <div className="price-table">
               <h3>Offres multiples</h3>
-              <table>
-                <thead>
-                <tr>
-                  <th></th>
-                  <th>Dual</th>
-                  <th>Dual Thaï</th>
-                  <th>All-inclusive</th>
-                </tr>
-                </thead>
-                <tfoot>
-                <tr>
-                  <td colSpan={4}>Prix mensuels</td>
-                </tr>
-                </tfoot>
-                <tbody>
-                <tr>
-                  <td>Etudiant</td>
-                  <td>70.-</td>
-                  <td>80.-</td>
-                  <td>90.-</td>
-                </tr>
-                <tr>
-                  <td>Adulte</td>
-                  <td>80.-</td>
-                  <td>90.-</td>
-                  <td>100.-</td>
-                </tr>
-                </tbody>
-              </table>
+              <div ref={tableToScroll} className="price-table-container">
+                <table>
+                  <thead>
+                  <tr>
+                    <th></th>
+                    <th>Dual</th>
+                    <th>Dual Thaï</th>
+                    <th>All-inclusive</th>
+                  </tr>
+                  </thead>
+                  <tfoot>
+                  <tr>
+                    <td colSpan={4}>Prix mensuels</td>
+                  </tr>
+                  </tfoot>
+                  <tbody>
+                  <tr>
+                    <td>Etudiant</td>
+                    <td>70.-</td>
+                    <td>80.-</td>
+                    <td>90.-</td>
+                  </tr>
+                  <tr>
+                    <td>Adulte</td>
+                    <td>80.-</td>
+                    <td>90.-</td>
+                    <td>100.-</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <ul>
               <li><strong>Dual</strong> inclus deux disciplines, sauf Muay Thaï.</li>
