@@ -7,8 +7,6 @@ import {
 	Routes,
 	Route
 } from "react-router-dom";
-import Index from "~/pages/index";
-import Cours from "~/pages/cours";
 import "normalize.css";
 import './global.scss';
 
@@ -17,8 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route path="/" Component={Index} />
-				<Route path="/cours" Component={Cours} />
+				<Route path="/" lazy={()=>import("~/pages/index.tsx")} />
+				<Route path="/cours" lazy={()=>import("~/pages/cours/index.tsx")} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>
