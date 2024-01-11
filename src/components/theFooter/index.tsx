@@ -50,7 +50,7 @@ export const Footer = () => {
 			}</ul>
 		</section>
 		<section className="copyright">
-			<p>&copy; 2023{currentYear !== 2023 ? "-{currentYear}" : ""} <a href="https://drafolin.ch">Odin Beuchat</a></p>
+			<p>&copy; 2023{currentYear !== 2023 ? `-${currentYear}` : ""} <a href="https://drafolin.ch">Odin Beuchat</a></p>
 		</section>
 	</footer>;
 };
