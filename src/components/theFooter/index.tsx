@@ -1,13 +1,13 @@
 import "./style.scss";
 import Comte from "~/assets/images/Comte.svg?react";
-import phoneIcon from "~/assets/images/phone.png";
-import emailIcon from "~/assets/images/email.png";
-import instagramIcon from "~/assets/images/instagram.png";
+import PhoneIcon from "~/assets/images/phone.svg?react";
+import EmailIcon from "~/assets/images/email.svg?react";
+import InstagramIcon from "~/assets/images/insta.svg?react";
 import { ReactElement } from "react";
 
 export const Footer = () => {
 	const sponsors: { image: ReactElement | string; website: string; name: string; }[] = [{
-		image: <Comte />,
+		image: <Comte className={"recolor"} />,
 		name: "Comte - Bâtiments et génie civil",
 		website: "https://www.gcomte.ch/fr/index.html"
 	}];
@@ -19,17 +19,17 @@ export const Footer = () => {
 			<ul>
 				<li>
 					<a href="https://instagram.com/siam_gym_ju" target={"_blank"}>
-						<img src={instagramIcon} alt="Retrouvez-nous sur instagram!" />
+						<InstagramIcon />
 					</a>
 				</li>
 				<li>
 					<a href="mailto:siam.gym.ju@gmail.com" target={"_blank"}>
-						<img src={emailIcon} alt={"Envoyez-nous un mail!"} />
+						<EmailIcon />
 					</a>
 				</li>
 				<li>
 					<a href="tel:+41789564648">
-						<img src={phoneIcon} alt={"Téléphonez-nous!"} />
+						<PhoneIcon />
 					</a>
 				</li>
 			</ul>
