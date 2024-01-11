@@ -32,7 +32,7 @@ export const Component = () => {
       <section className="intro">
         <ClubIcon/>
         <p>Bienvenue au</p>
-        <h1>SiamGym</h1>
+        <h1>Siam Gym</h1>
       </section>
       <section className="offers">
         <h2>Nos prestations</h2>
