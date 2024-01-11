@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><g
+     id="layer1"
+     transform="translate(-142.5542,-25.217004)"><g
+       style="fill:none"
+       id="g4"
+       transform="matrix(0.26458333,0,0,0.26458333,100.1455,152.37526)"><circle
+         style="fill:#6cdc2d;fill-opacity:1;stroke:none;stroke-width:0.841431;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         id="path352"
+         cx="254.77306"
+         cy="-386.10995"
+         r="94.48819" /><g
+         style="fill:none"
+         id="g352"
+         transform="matrix(4.7244095,0,0,4.7244095,198.08014,-442.80287)"><path
+           d="M 22,12 C 22,10.6868 21.7413,9.38647 21.2388,8.1731 20.7362,6.95996 19.9997,5.85742 19.0711,4.92896 18.1425,4.00024 17.0401,3.26367 15.8268,2.76123 14.6136,2.25854 13.3132,2 12,2 v 2 c 1.0506,0 2.0909,0.20703 3.0615,0.60889 0.9706,0.4021 1.8525,0.99145 2.5954,1.73437 0.7428,0.74268 1.3321,1.62476 1.7341,2.59522 C 19.7931,9.90918 20,10.9495 20,12 Z"
+           fill="currentColor"
+           id="path1"
+           style="fill:#ffffff;fill-opacity:1" /><path
+           d="M 2,10 V 5 C 2,4.44775 2.44772,4 3,4 H 8 C 8.55228,4 9,4.44775 9,5 V 9 C 9,9.55225 8.55228,10 8,10 H 6 c 0,4.4182 3.58173,8 8,8 v -2 c 0,-0.5522 0.4477,-1 1,-1 h 4 c 0.5523,0 1,0.4478 1,1 v 5 c 0,0.5522 -0.4477,1 -1,1 H 14 C 7.37259,22 2,16.6274 2,10 Z"
+           fill="currentColor"
+           id="path2"
+           style="fill:#ffffff;fill-opacity:1" /><path
+           d="M 17.5433,9.70386 C 17.8448,10.4319 18,11.2122 18,12 h -1.8 c 0,-0.5515 -0.1086,-1.0977 -0.3197,-1.6072 C 15.6692,9.88306 15.3599,9.42017 14.9698,9.03027 14.5798,8.64014 14.1169,8.33081 13.6073,8.11963 13.0977,7.90869 12.5515,7.80005 12,7.80005 V 6 c 0.7879,0 1.5681,0.15527 2.2961,0.45679 0.7279,0.30151 1.3894,0.74341 1.9465,1.30053 0.5572,0.55713 0.9992,1.21851 1.3007,1.94654 z"
+           fill="currentColor"
+           id="path3"
+           style="fill:#ffffff;fill-opacity:1" /></g></g></g></svg>

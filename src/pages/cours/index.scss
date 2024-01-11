@@ -1,10 +1,9 @@
 main.page-cours {
   section {
     &.intro {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("~/assets/images/cours.jpg");
       min-height: 30em;
-      background-position: center;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center,
+      url("~/assets/images/cours.webp") center;
       background-size: cover;
       color: white;
       justify-content: center;
