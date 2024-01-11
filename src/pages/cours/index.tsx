@@ -1,7 +1,7 @@
 import "./index.scss";
 import ScrollView from "~/components/ScrollView";
 
-export const Page = () => {
+export const Component = () => {
   return <main className="page-cours">
     <section className="intro">
       <h1>Nos cours</h1>
@@ -144,4 +144,4 @@ export const Page = () => {
   </main>;
 };
 
-export default Page;
+export default Component;
