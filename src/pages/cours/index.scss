@@ -25,6 +25,10 @@ main.page-cours {
           -moz-appearance: none;
           appearance: none;
           margin-bottom: 1em;
+
+          option {
+            text-align:center;
+          }
         }
 
         >div {
