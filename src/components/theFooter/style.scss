@@ -5,10 +5,20 @@ footer {
 
   svg {
     height: fit-content;
+    max-width: 100%;
+
     &.recolor,
     &.recolor * {
-      stroke: var(color);
-      fill: var(color);
+      filter: grayscale(1);
+      transition: all 300ms cubic-bezier(0.5, 0, 0.5, 1);
+
+      @media screen and (pointer: coarse) {
+        filter: grayscale(0);
+      }
+
+      &:hover {
+        filter: grayscale(0);
+      }
     }
   }
 
@@ -64,13 +74,29 @@ footer {
         padding: 0;
         margin: 0;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
 
         li {
+          width: 60%;
+
           a {
-            display: block;
-            width: fit-content;
+            width: 100%;
             height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:hover {
+              background-color: transparent;
+              box-shadow: none;
+            }
+
+            svg {
+              width: 100%;
+            }
           }
+
           &:nth-child(even) {
             grid-column: 3 / 5;
           }
