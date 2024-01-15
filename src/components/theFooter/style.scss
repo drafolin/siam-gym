@@ -3,10 +3,13 @@ footer {
   color: var(--gray);
   background-color: var(--secondary);
 
-  svg.recolor,
-  svg.recolor * {
-    stroke: var(color);
-    fill: var(color);
+  svg {
+    height: fit-content;
+    &.recolor,
+    &.recolor * {
+      stroke: var(color);
+      fill: var(color);
+    }
   }
 
   @media screen and (prefers-color-scheme: dark) {
