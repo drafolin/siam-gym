@@ -1,5 +1,6 @@
 import "./index.scss";
 import ScrollView from "~/components/ScrollView";
+import ThePlanning from "./thePlanning.tsx";
 
 export const Component = () => {
   return <main className="page-cours">
@@ -8,7 +9,7 @@ export const Component = () => {
     </section>
     <section className="planning">
       <h2>Horaires</h2>
-      <table></table>
+      <ThePlanning/>
     </section>
     <section className="prices">
       <h2>Nos abonnements</h2>
@@ -17,7 +18,6 @@ export const Component = () => {
           <div className="w1">
             <div className="price-table">
               <h3>Muay thaï</h3>
-              <p>4 cours par semaine</p>
               <div className="price-table-container">
                 <table>
                   <thead>
@@ -51,7 +51,6 @@ export const Component = () => {
           <div className="w1">
             <div className="price-table">
               <h4>Boxe anglaise ou circuit training</h4>
-              <p>3 cours par semaine</p>
               <div className="price-table-container">
                 <table>
                   <thead>

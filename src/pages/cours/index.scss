@@ -9,6 +9,99 @@ main.page-cours {
       justify-content: center;
     }
 
+    &.planning {
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > div.custom-select {
+          position: relative;
+          margin-bottom: 1em;
+
+          select {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            padding: 0.5em 1em;
+            min-width: 20em;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: black;
+
+            &:focus {
+              outline: none;
+            }
+
+            @media screen and (prefers-color-scheme: dark) {
+              color: white;
+            }
+
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            right: 1rem;
+            pointer-events: none;
+            border-left: .4rem solid transparent;
+            border-right: .4rem solid transparent;
+            border-top: .4rem solid var(--gray);
+            top: 45%;
+            width: 0;
+            height: 0;
+          }
+        }
+
+        > div:not(.custom-select) {
+          width: 20em;
+
+          > div {
+            margin: 1em auto;
+
+            .header {
+              margin: .5em 0;
+
+              .title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                padding-right: 1em;
+                align-items: center;
+
+                h3 {
+                  width: fit-content;
+                  margin: .5em 0;
+                }
+
+                p {
+                  margin: 0
+                }
+              }
+            }
+
+            .content {
+              ul {
+                margin: 0 auto;
+                width: fit-content;
+                padding-left: 2em;
+
+                li {
+                  width: fit-content;
+
+                  &:first-child {
+                    margin-top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     &.prices {
       .subs {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -17,9 +110,10 @@ main.page-cours {
         display: flex;
         flex-direction: column;
         text-align: left;
+        width: 80%;
 
         section {
-          width: fit-content;
+          width: 100%;
 
           .price-table {
             display: flex;
