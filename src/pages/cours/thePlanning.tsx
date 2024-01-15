@@ -90,26 +90,28 @@ export const Component = () => {
   ]
 
   return <div>
-    <select onChange={v => setCurrentDay(parseInt(v.target.value))}>
-      {
-        planning.map((day, index) =>
-          <option
-            key={index}
-            value={index}
-            disabled={day.courses.length === 0}>
-            {day.day}
-          </option>
-        )
-      }
-    </select>
+    <div className="custom-select">
+      <select onChange={v => setCurrentDay(parseInt(v.target.value))}>
+        {
+          planning.map((day, index) =>
+            <option
+              key={index}
+              value={index}
+              disabled={day.courses.length === 0}>
+              {day.day}
+            </option>
+          )
+        }
+      </select>
+    </div>
     <div>
       {
         planning[ currentDay ].courses.map((course, index) =>
           <DropDown title={<>
             <p>{course.timeStart} - {course.timeEnd}</p>
             <h3>{course.name}</h3>
-            </>}
-            deploy={null}
+          </>}
+                    deploy={null}
                     key={index}
           >
             <ul>

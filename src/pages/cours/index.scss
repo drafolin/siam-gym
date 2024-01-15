@@ -10,31 +10,54 @@ main.page-cours {
     }
 
     &.planning {
-      >div {
+      > div {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        select {
-          background-color: rgba(0, 0, 0, 0.05);
-          border-radius: 20px;
-          padding: 0.5em 1em;
-          min-width: 20em;
-          text-align:center;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
+        > div.custom-select {
+          position: relative;
           margin-bottom: 1em;
 
-          option {
-            text-align:center;
+          select {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            padding: 0.5em 1em;
+            min-width: 20em;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: black;
+
+            &:focus {
+              outline: none;
+            }
+
+            @media screen and (prefers-color-scheme: dark) {
+              color: white;
+            }
+
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            right: 1rem;
+            pointer-events: none;
+            border-left: .4rem solid transparent;
+            border-right: .4rem solid transparent;
+            border-top: .4rem solid var(--gray);
+            top: 45%;
+            width: 0;
+            height: 0;
           }
         }
 
-        >div {
+        > div:not(.custom-select) {
           width: 20em;
 
-          >div {
+          > div {
             margin: 1em auto;
 
             .header {
@@ -45,7 +68,7 @@ main.page-cours {
                 flex-direction: row;
                 justify-content: space-between;
                 width: 100%;
-                padding-right:1em;
+                padding-right: 1em;
                 align-items: center;
 
                 h3 {
