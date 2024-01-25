@@ -16,7 +16,7 @@ export const Component = () => {
 	const size = useSize(document.body);
 	const [menuState, setMenuState] = useState<MenuState>(MenuState.CLOSED);
 	const animation = useRef<NodeJS.Timeout | null>(null);
-	const isBigScreen = () => ((size?.width ?? 0) > 768);
+	const isBigScreen = () => ( ( size?.width ?? 0 ) > 768 );
 
 	const toggleMenu = () => {
 		if (menuState === MenuState.OPENED || menuState === MenuState.OPENING) {
@@ -73,26 +73,25 @@ export const Component = () => {
 							menuState === MenuState.CLOSING ? "closing" :
 								menuState === MenuState.OPENING ? "opening" :
 									menuState === MenuState.OPENED ? "open" : ""
-					} />
+					}/>
 					<span className={
 						menuState === MenuState.CLOSED ? "" :
 							menuState === MenuState.CLOSING ? "closing" :
 								menuState === MenuState.OPENING ? "opening" :
 									menuState === MenuState.OPENED ? "open" : ""
-					} />
+					}/>
 					<span className={
 						menuState === MenuState.CLOSED ? "" :
 							menuState === MenuState.CLOSING ? "closing" :
 								menuState === MenuState.OPENING ? "opening" :
 									menuState === MenuState.OPENED ? "open" : ""
-					} />
+					}/>
 				</div>}
 		</header>
 		<CSSTransition
-			in={!isBigScreen() && (menuState === MenuState.OPENED || menuState === MenuState.OPENING)}
+			in={!isBigScreen() && ( menuState === MenuState.OPENED || menuState === MenuState.OPENING )}
 			timeout={350}
-			classNames="menu"
-			unmountOnExit>
+			classNames="menu">
 			<nav className="menu">
 				<ul>{
 					menuLinks.map((v, i) =>
