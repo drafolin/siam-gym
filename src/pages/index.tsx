@@ -12,7 +12,7 @@ export const Component = () => {
     },
     {
       title: "Boxe anglaise",
-      details: ["Tous niveaux"],
+      details: ["Débutants", "Intermédiaires"],
       isDeployed: false
     },
     {
