@@ -41,7 +41,11 @@ export const Component = () => {
               return <li key={index}>
                 <DropDown title={prestation.title}>
                   <ul>
-                    {prestation.details.map((detail, index) => <li key={index}>{detail}</li>)}
+                    {prestation.details.map((detail, index) =>
+                      <li className={"plainBullet"} key={index}>
+                        {detail}
+                      </li>
+                    )}
                   </ul>
                 </DropDown>
               </li>;
