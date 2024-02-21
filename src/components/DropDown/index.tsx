@@ -3,7 +3,7 @@ import { CSSTransition } from "react-transition-group";
 import "./style.scss";
 
 
-const Component: FunctionComponent<{ title: React.ReactNode, children: React.ReactNode, deploy: boolean | null; }> = ({ title, children, deploy }) => {
+const Component: FunctionComponent<{ title: React.ReactNode, children: React.ReactNode, deploy?: boolean; }> = ({ title, children, deploy }) => {
 	const [isDeployed, setIsDeployed] = useState(false);
 
 	const shouldBeDeployed = () => deploy ?? isDeployed;
