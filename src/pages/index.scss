@@ -16,6 +16,11 @@ main {
     }
 
     &.offers {
+      span.center {
+        margin: auto;
+        width: fit-content;
+      }
+
       ul {
         padding: 0;
         list-style: none;
@@ -23,27 +28,31 @@ main {
 
         li {
           margin: 0;
-          padding: 1.25em 0;
+          padding: 0;
 
           &:not(:last-child) {
             border-bottom: 1px solid lightgray;
+          }
 
-            ul {
-              padding: 0 3em;
-              li {
-                margin: 0.75em 0;
-                padding: 0;
-                list-style: circle;
+          ul {
+            padding: 0 3em;
+            width: 100%;
+            margin-bottom: 1.75em;
 
-                &:not(:last-child) {
-                  border-bottom: none;
-                }
+            li {
+              margin: 0.75em 0;
+              padding: 0;
+              list-style: circle;
 
-                &:last-child {
-                  margin-bottom: 0;
-                }
+              &:not(:last-child) {
                 border-bottom: none;
               }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              border-bottom: none;
             }
           }
 
@@ -61,6 +70,7 @@ main {
 
     &.map {
       padding: 0;
+
       iframe {
         width: 100%;
         aspect-ratio: 4/3;

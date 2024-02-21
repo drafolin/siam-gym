@@ -111,7 +111,6 @@ export const Component = () => {
             <p>{course.timeStart} - {course.timeEnd}</p>
             <h3>{course.name}</h3>
           </>}
-                    deploy={null}
                     key={index}
           >
             <ul>

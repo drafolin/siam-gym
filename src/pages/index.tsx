@@ -1,10 +1,9 @@
 import './index.scss';
 import ClubIcon from '~/assets/images/icon.svg?react';
 import DropDown from '~/components/DropDown/index';
-import { useState } from "react";
 
 export const Component = () => {
-  const [prestations, setPrestations] = useState([
+  const prestations =[
     {
       title: "Boxe thaïlandaise",
       details: ["Enfants", "Adultes (débutants - avancés)"],
@@ -25,7 +24,7 @@ export const Component = () => {
       details: ["Programme d’entraînement personnalisé", "Préparation physique", "Personnel ou équipe"],
       isDeployed: false
     }
-  ]);
+  ];
 
   return (
     <main>
@@ -39,12 +38,8 @@ export const Component = () => {
         <ul>
           {
             prestations.map((prestation, index) => {
-              return <li onClick={() => {
-                const newPrestations = [...prestations];
-                newPrestations[ index ].isDeployed = !prestation.isDeployed;
-                setPrestations([...newPrestations]);
-              }} key={index}>
-                <DropDown title={prestation.title} deploy={prestation.isDeployed}>
+              return <li key={index}>
+                <DropDown title={prestation.title}>
                   <ul>
                     {prestation.details.map((detail, index) => <li key={index}>{detail}</li>)}
                   </ul>
@@ -53,6 +48,7 @@ export const Component = () => {
             })
           }
         </ul>
+        <span className={"center"}>Plus d'informations sur <a href="/cours">la page des cours</a></span>
       </section>
       <section className="gallery">
         <h2>Galerie</h2>

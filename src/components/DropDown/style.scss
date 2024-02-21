@@ -9,6 +9,9 @@
     color: var(--text);
     font-weight: bold;
     width: 100%;
+    pointer-events: all;
+    cursor: pointer;
+    padding: 1.25em;
 
     .arrow {
       transition: transform 300ms ease-in-out;
