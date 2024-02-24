@@ -12,17 +12,15 @@ export const Component = () => {
     {
       title: "Boxe anglaise",
       details: ["Débutants", "Intermédiaires"],
-      isDeployed: false
+      comingSoon: true
     },
     {
       title: "Circuit training",
       details: ["Renforcement musculaire", "Cardio"],
-      isDeployed: false
     },
     {
       title: "Coaching privé",
       details: ["Programme d’entraînement personnalisé", "Préparation physique", "Personnel ou équipe"],
-      isDeployed: false
     }
   ];
 
@@ -39,7 +37,7 @@ export const Component = () => {
           {
             prestations.map((prestation, index) => {
               return <li key={index}>
-                <DropDown title={prestation.title}>
+                <DropDown title={<span className={prestation.comingSoon ? "coming-soon" : undefined}>{prestation.title}</span>}>
                   <ul>
                     {prestation.details.map((detail, index) =>
                       <li className={"plainBullet"} key={index}>
