@@ -10,7 +10,7 @@ import {
 import "normalize.css";
 import './global.scss';
 
-const Layout = () => <>
+export const Layout = () => <>
 	<Header/>
 	<Outlet/>
 	<Footer/>
