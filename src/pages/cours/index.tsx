@@ -51,7 +51,7 @@ export const Component = () => {
           </div>
           <div className="w1">
             <div className="price-table">
-              <h4>Boxe anglaise ou circuit training</h4>
+              <h4>Circuit training</h4>
               <div className="price-table-container">
                 <table>
                   <thead>
