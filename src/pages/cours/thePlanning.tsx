@@ -8,12 +8,6 @@ export const Component = () => {
       day: "Lundi",
       courses: [
         {
-          name: "Boxe anglaise",
-          timeStart: "18:00",
-          timeEnd: "19:00",
-          teacher: "Patrick",
-        },
-        {
           name: "Muay thaï Adultes",
           timeStart: "19:00",
           timeEnd: "20:30",
@@ -31,7 +25,7 @@ export const Component = () => {
           teacher: "Guillaume",
         },
         {
-          name: "Boxe anglaise",
+          name: "Muay thaï",
           timeStart: "19:15",
           timeEnd: "20:15",
           teacher: "Guillaume",

@@ -30,6 +30,11 @@ main {
           margin: 0;
           padding: 0;
 
+          span.coming-soon:after {
+            content: " (à venir...)";
+            color: var(--accent);
+          }
+
           &:not(:last-child) {
             border-bottom: 1px solid lightgray;
           }
