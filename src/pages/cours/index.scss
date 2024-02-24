@@ -1,13 +1,22 @@
 main.page-cours {
-  ul{
+  ul {
     width: fit-content;
+    padding-left: 1em;
 
     li {
       width: fit-content;
     }
   }
 
+  @media screen and (max-width: 750px) {
+    ul {
+      width: 80%;
+
+    }
+  }
+
   section {
+
     &.intro {
       min-height: 30em;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center,
@@ -118,7 +127,6 @@ main.page-cours {
         display: flex;
         flex-direction: column;
         text-align: left;
-        width: 80%;
 
         section {
           width: 100%;
@@ -173,6 +181,14 @@ main.page-cours {
     }
   }
 
+  .subsection {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  
   .w1-2h {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -196,7 +212,7 @@ main.page-cours {
   }
 
   .emphasis {
-font-weight: bold;
+    font-weight: bold;
     color: var(--accent)
   }
 }
