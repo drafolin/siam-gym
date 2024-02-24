@@ -13,6 +13,7 @@ export const Component = () => {
     </section>
     <section className="prices">
       <h2>Nos abonnements</h2>
+      <p className={"emphasis"}>Les abonnements mensuels sont basés sur les mois civils!</p>
       <div className="subs">
         <section>
           <div className="w1">
