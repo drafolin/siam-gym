@@ -1,4 +1,12 @@
 main.page-cours {
+  ul{
+    width: fit-content;
+
+    li {
+      width: fit-content;
+    }
+  }
+
   section {
     &.intro {
       min-height: 30em;

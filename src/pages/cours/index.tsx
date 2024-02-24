@@ -126,12 +126,18 @@ export const Component = () => {
       </p>
       <h2>Carte multicours</h2>
       <p>
-        Si vous souhaitez participer à plusieurs cours, nous offrons des cartes
-        de fidélité, qui offrent une réduction de 10.- sur une tranche de 10 cours.
+        Si vous souhaitez participer à plusieurs cours, nous avons un programme de fidélité.
+        Une réduction de CHF 1.- par cours vous est offerte pour chaque série de 10 cours.
       </p>
       <p>
-        Ainsi, vous payez 90.- pour 10 cours.
+        Vous payez donc ainsi:
       </p>
+      <ul>
+        <li>10.-/cours jusqu'à 10 cours</li>
+        <li>9.-/cours jusqu'à 20 cours</li>
+        <li>8.-/cours jusqu'à 30 cours</li>
+        <li>etc. jusqu'a 5.-/cours dès 50 cours</li>
+      </ul>
     </section>
     <section>
       <h2>Cours sur demande</h2>
