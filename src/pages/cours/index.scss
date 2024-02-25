@@ -103,10 +103,17 @@ main.page-cours {
               ul {
                 margin: 0 auto;
                 width: fit-content;
-                padding-left: 2em;
+                padding: 0;
 
                 li {
                   width: fit-content;
+                  list-style: none;
+
+                  &:before, &:after {
+                    content: "-";
+                    padding: 1em;
+                    color: var(--accent);
+                  }
 
                   &:first-child {
                     margin-top: 0;
@@ -188,7 +195,7 @@ main.page-cours {
     justify-content: start;
     align-items: center;
   }
-  
+
   .w1-2h {
     display: grid;
     grid-template-columns: 1fr 1fr;
