@@ -104,6 +104,9 @@ main.page-cours {
                 margin: 0 auto;
                 width: fit-content;
                 padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 li {
                   width: fit-content;
