@@ -25,7 +25,7 @@ export const Component = () => {
 					teacher: "Guillaume",
 				},
 				{
-					name: "Muay thaï",
+					name: "Muay thaï Seniors",
 					timeStart: "19:00",
 					timeEnd: "20:30",
 					teacher: "Guillaume",
