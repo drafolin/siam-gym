@@ -71,17 +71,6 @@ export const Component = () => {
         },
       ],
     },
-    {
-      day: "Samedi",
-      courses: [
-        {
-          name: "Free",
-          timeStart: "9:00",
-          timeEnd: "11:00",
-          teacher: "Guillaume/Patrick",
-        },
-      ],
-    },
   ];
 
   return (
