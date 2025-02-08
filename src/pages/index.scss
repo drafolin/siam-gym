@@ -1,87 +1,120 @@
 main {
-  section {
-    &.intro {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    section {
+        &.intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
-      svg {
-        margin: 1em;
-        width: 40%;
-        height: auto;
-        aspect-ratio: 1;
-        max-width: 256px;
-      }
-    }
-
-    &.offers {
-      span.center {
-        margin: auto;
-        width: fit-content;
-      }
-
-      ul {
-        padding: 0;
-        list-style: none;
-        width: 80%;
-
-        li {
-          margin: 0;
-          padding: 0;
-
-          span.coming-soon:after {
-            content: " (à venir...)";
-            color: var(--accent);
-          }
-
-          &:not(:last-child) {
-            border-bottom: 1px solid lightgray;
-          }
-
-          ul {
-            padding: 0 3em;
-            width: 100%;
-            margin-bottom: 1.75em;
-
-            li {
-              margin: 0.5em 0;
-              padding: 0;
-              list-style: disc;
-
-              &:not(:last-child) {
-                border-bottom: none;
-              }
-
-              &:last-child {
-                margin-bottom: 0;
-              }
-
-              border-bottom: none;
+            svg {
+                margin: 1em;
+                width: 40%;
+                height: auto;
+                aspect-ratio: 1;
+                max-width: 256px;
             }
-          }
-
-          &::marker,
-          ::marker {
-            color: var(--accent);
-          }
         }
-      }
-    }
 
-    &.gallery {
-      text-align: center;
-    }
+        &.offers {
+            span.center {
+                margin: auto;
+                width: fit-content;
+            }
 
-    &.map {
-      padding: 0;
+            ul {
+                padding: 0;
+                list-style: none;
+                width: 80%;
 
-      iframe {
-        width: 100%;
-        aspect-ratio: 4/3;
-        max-height: 400px;
-        border: none;
-      }
+                li {
+                    margin: 0;
+                    padding: 0;
+
+                    span.coming-soon:after {
+                        content: " (à venir...)";
+                        color: var(--accent);
+                    }
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid lightgray;
+                    }
+
+                    ul {
+                        padding: 0 3em;
+                        width: 100%;
+                        margin-bottom: 1.75em;
+
+                        li {
+                            margin: 0.5em 0;
+                            padding: 0;
+                            list-style: disc;
+
+                            &:not(:last-child) {
+                                border-bottom: none;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            border-bottom: none;
+                        }
+                    }
+
+                    &::marker,
+                    ::marker {
+                        color: var(--accent);
+                    }
+                }
+            }
+        }
+
+        &.gallery {
+            text-align: center;
+
+            .carousel {
+                width: 100%;
+                position: relative;
+
+                .carousel__button {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    border: none;
+                    border-radius: 0;
+                    padding: 0.5em;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    color: white;
+                }
+
+                .carousel__back-button {
+                    @extend .carousel__button;
+                    left: 0;
+                }
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                }
+
+                .carousel__next-button {
+                    @extend .carousel__button;
+                    right: 0;
+                }
+            }
+        }
+
+        &.map {
+            padding: 0;
+
+            iframe {
+                width: 100%;
+                aspect-ratio: 4/3;
+                max-height: 400px;
+                border: none;
+            }
+        }
     }
-  }
 }
