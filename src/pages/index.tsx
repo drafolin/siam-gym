@@ -96,7 +96,7 @@ export const Component = () => {
       </section>
       <section className="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2703.111380592439!2d7.400561577268922!3d47.351223371167606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791dd40e744a6b3%3A0xe14a086d41861fa5!2sRte%20de%20Courroux%2029%2C%202824%20Vicques!5e0!3m2!1sen!2sch!4v1702230155582!5m2!1sen!2sch"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168.94476900484486!2d7.403032938974039!3d47.35112724366917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791ddbb05bd273d%3A0x97b7b54d5e7a3a92!2sSiam%20Gym!5e0!3m2!1sen!2sch!4v1743699632757!5m2!1sen!2sch"
           loading="lazy"
           className="full-width"
         />
