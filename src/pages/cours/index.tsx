@@ -5,20 +5,20 @@ import ThePlanning from "./thePlanning.tsx";
 export const Component = () => {
 	return <main className="page-cours">
 		<section className="intro">
-			<h1>Nos cours</h1>
+			<h1 className="font-bold">Nos cours</h1>
 		</section>
 		<section className="planning">
-			<h2>Horaires</h2>
+			<h2 className="text-2xl font-bold my-4">Horaires</h2>
 			<ThePlanning/>
 		</section>
 		<section className="prices">
-			<h2>Nos abonnements</h2>
-			<p className={"emphasis"}>Les abonnements mensuels sont basés sur les mois civils!</p>
+			<h2 className="text-2xl font-bold my-4">Nos abonnements</h2>
+			<p className="text-(--accent) font-bold text-lg my-4">Les abonnements mensuels sont basés sur les mois civils!</p>
 			<div className="subsection subs">
 				<section>
 					<div className="w1">
 						<div className="price-table">
-							<h3>Muay thaï</h3>
+							<h4 className="font-bold text-lg my-3">Muay thaï</h4>
 							<div className="price-table-container">
 								<table>
 									<thead>
@@ -51,7 +51,7 @@ export const Component = () => {
 					</div>
 					<div className="w1">
 						<div className="price-table">
-							<h4>Circuit training</h4>
+							<h4 className="font-bold text-lg my-3">Circuit training</h4>
 							<div className="price-table-container">
 								<table>
 									<thead>
@@ -79,7 +79,7 @@ export const Component = () => {
 					</div>
 					<div className="w1">
 						<div className="price-table">
-							<h3>Offres multiples</h3>
+							<h3 className="font-bold text-lg my-3">Offres multiples</h3>
 							<ScrollView>
 								<table>
 									<thead>
@@ -112,7 +112,7 @@ export const Component = () => {
 								</table>
 							</ScrollView>
 						</div>
-						<ul>
+						<ul className="my-4">
 							<li><strong>Dual</strong> inclus deux disciplines, sauf Muay Thaï.</li>
 							<li><strong>Dual thaï</strong> inclus le Muay Thaï et une autre discipline.</li>
 							<li><strong>All-inclusive</strong> inclus toutes les disciplines du club.</li>
@@ -121,21 +121,21 @@ export const Component = () => {
 				</section>
 			</div>
 			<div className="subsection unique-courses">
-				<h2>Cours uniques</h2>
-				<p>
+				<h2 className="font-bold text-2xl my-4">Cours uniques</h2>
+				<p className="py-4">
 					Vous pouvez participer à un seul cours pour le prix de 10.- par cours.
 				</p>
 			</div>
 			<div className="subsection multicourse">
-				<h2>Carte multicours</h2>
-				<p>
+				<h2 className="font-bold text-2xl my-4">Carte multicours</h2>
+				<p className="py-4">
 					Si vous souhaitez participer à plusieurs cours, nous avons un programme de fidélité.
 					Une réduction de CHF 1.- par cours vous est offerte pour chaque série de 10 cours.
 				</p>
-				<p>
+				<p className="py-4">
 					Vous payez donc ainsi:
 				</p>
-				<ul>
+				<ul className="py-4">
 					<li>10.-/cours jusqu'à 10 cours</li>
 					<li>9.-/cours jusqu'à 20 cours</li>
 					<li>8.-/cours jusqu'à 30 cours</li>
@@ -145,8 +145,8 @@ export const Component = () => {
 		</section>
 		<section>
 			<div className="subsection on-demand">
-				<h2>Cours sur demande</h2>
-				<ul>
+				<h2 className="font-bold text-2xl my-4">Cours sur demande</h2>
+				<ul className="my-4">
 					<li>Coaching privé ou équipe</li>
 					<li>Programme d'entraînement personnalisé</li>
 					<li>Préparation physique complète</li>

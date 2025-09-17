@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import "normalize.css";
 import './global.scss';
+import './tailwind.css'
 
 export const Layout = () => <>
 	<Header/>

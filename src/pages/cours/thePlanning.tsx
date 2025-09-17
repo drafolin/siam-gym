@@ -69,7 +69,7 @@ export const Component = () => {
   return (
     <div>
       <div className="custom-select">
-        <select onChange={(v) => setCurrentDay(parseInt(v.target.value))}>
+        <select onChange={(v) => setCurrentDay(parseInt(v.target.value))} className="border border-white font-normal">
           {planning.map((day, index) => (
             <option
               key={index}
@@ -94,8 +94,8 @@ export const Component = () => {
             }
             key={index}
           >
-            <ul>
-              <li>
+            <ul className="list-none! m-0 p-0 flex flex-col gap-2 items-center w-full!">
+              <li className="before:content-['-'] after:content-['-'] before:p-4 after:p-4 before:text-(--accent) after:text-(--accent)">
                 <strong>Coach</strong>: {course.teacher}
               </li>
               {course.note?.map((v, i) => <li key={i}>{v}</li>)}

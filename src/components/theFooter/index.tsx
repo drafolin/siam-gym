@@ -24,7 +24,7 @@ export const Footer = () => {
 
   return <footer>
     <section className="contact">
-      <ul>
+      <ul className="my-4">
         <li>
           <a href="https://instagram.com/siam_gym_ju" target={"_blank"}>
             <InstagramIcon/>
@@ -43,8 +43,8 @@ export const Footer = () => {
       </ul>
     </section>
     <section className="sponsors">
-      <p>Nos collaborateurs</p>
-      <ul>{
+      <p className="my-4">Nos collaborateurs</p>
+      <ul className="my-4">{
         sponsors.map((v, i) =>
           <li key={i}>
             <a href={v.website}>
@@ -58,7 +58,7 @@ export const Footer = () => {
       }</ul>
     </section>
     <section className="copyright">
-      <p>&copy; 2023{currentYear !== 2023 ? `-${currentYear}` : ""} <a href="https://drafolin.ch">Dråfølin</a></p>
+      <p className="my-4">&copy; 2023{currentYear !== 2023 ? `-${currentYear}` : ""} <a href="https://drafolin.ch">Dråfølin</a></p>
     </section>
   </footer>;
 };

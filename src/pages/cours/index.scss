@@ -112,12 +112,6 @@ main.page-cours {
                   width: fit-content;
                   list-style: none;
 
-                  &:before, &:after {
-                    content: "-";
-                    padding: 1em;
-                    color: var(--accent);
-                  }
-
                   &:first-child {
                     margin-top: 0;
                   }
