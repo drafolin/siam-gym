@@ -38,7 +38,9 @@ export const Component = () => {
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
-  const [isTransitionning, setIsTransitionning] = useState<"next"|"prev"|false>(false);
+  const [isTransitionning, setIsTransitionning] = useState<
+    "next" | "prev" | false
+  >(false);
 
   const images: {
     src: string;
@@ -51,20 +53,20 @@ export const Component = () => {
   ];
 
   const handleGalleryNext = () => {
-    setIsTransitionning("next")
+    setIsTransitionning("next");
     setTimeout(() => {
-      setIsTransitionning(false)
-      setCurrentImage((currentImage + 1) % images.length)
+      setIsTransitionning(false);
+      setCurrentImage((currentImage + 1) % images.length);
     }, 1000);
-  }
+  };
 
   const handleGalleryPrev = () => {
-    setIsTransitionning("prev")
+    setIsTransitionning("prev");
     setTimeout(() => {
-    setCurrentImage((currentImage - 1 + images.length) % images.length)
-      setIsTransitionning(false)
+      setCurrentImage((currentImage - 1 + images.length) % images.length);
+      setIsTransitionning(false);
     }, 1000);
-  }
+  };
 
   return (
     <main>
@@ -99,33 +101,58 @@ export const Component = () => {
       <section className="gallery">
         <h2 className="text-2xl font-bold my-3">Galerie</h2>
         <div className="relative h-[75vh] overflow-hidden">
-          <div className={
-            `absolute top-0 right-full w-full h-full flex flex-col justify-center ${
-            isTransitionning === 'prev' ? 'duration-1000 transition-transform translate-x-full' : ''
-          }`}>
-            <img className="h-full object-cover" src={images[(currentImage - 1 + images.length) % images.length].src} />
+          <div
+            className={`absolute top-0 right-full w-full h-full flex flex-col justify-center ${
+              isTransitionning === "prev"
+                ? "duration-1000 transition-transform translate-x-full"
+                : ""
+            }`}
+          >
+            <img
+              className="h-full object-cover"
+              src={
+                images[(currentImage - 1 + images.length) % images.length].src
+              }
+            />
           </div>
-          <div className={
-            `absolute top-0 right-0 left-0 w-full h-full flex flex-col justify-center ${
-              isTransitionning === 'prev' ? 'duration-1000 transition-transform translate-x-full': ''
+          <div
+            className={`absolute top-0 right-0 left-0 w-full h-full flex flex-col justify-center ${
+              isTransitionning === "prev"
+                ? "duration-1000 transition-transform translate-x-full"
+                : ""
             } ${
-              isTransitionning === 'next' ? 'duration-1000 transition-transform -translate-x-full' : ''
-          }` }>
-            <img className="h-full object-cover" src={images[currentImage].src} />
+              isTransitionning === "next"
+                ? "duration-1000 transition-transform -translate-x-full"
+                : ""
+            }`}
+          >
+            <img
+              className="h-full object-cover"
+              src={images[currentImage].src}
+            />
           </div>
-          <div className={`absolute top-0 left-full w-full h-full flex flex-col justify-center ${
-            isTransitionning === 'next' ? 'duration-1000 transition-transform -translate-x-full' : ''
-          }`}>
-            <img className="h-full object-cover" src={images[(currentImage + 1) % images.length].src} />
+          <div
+            className={`absolute top-0 left-full w-full h-full flex flex-col justify-center ${
+              isTransitionning === "next"
+                ? "duration-1000 transition-transform -translate-x-full"
+                : ""
+            }`}
+          >
+            <img
+              className="h-full object-cover"
+              src={images[(currentImage + 1) % images.length].src}
+            />
           </div>
-          <button 
+          <button
             className="absolute left-0 top-0 bottom-0 w-12 bg-neutral-700/40 hover:bg-neutral-700 transition-all transition-300 cursor-pointer"
-            onClick={handleGalleryPrev}>
+            onClick={handleGalleryPrev}
+          >
             &larr;
           </button>
-          <button 
+          <button
             className="absolute right-0 top-0 bottom-0 w-12 bg-neutral-700/40 hover:bg-neutral-700 transition-all transition-300 cursor-pointer"
-            onClick={handleGalleryNext}>
+            onClick={handleGalleryNext}
+          >
             &rarr;
           </button>
         </div>

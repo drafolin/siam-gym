@@ -10,18 +10,21 @@ export const Component = ({ children }: { children: ReactElement }) => {
     isFinished: false,
     isGoingForward: true,
     pauseCounter: 50,
-    isRunning: false
-  })
+    isRunning: false,
+  });
 
   useEffect(() => {
     const runAnimation = () => {
       tableAnimationData.current!.isRunning = true;
-      if (tableToScroll.current!.scrollLeft === 0 && !tableAnimationData.current.isGoingForward) {
+      if (
+        tableToScroll.current!.scrollLeft === 0 &&
+        !tableAnimationData.current.isGoingForward
+      ) {
         tableAnimationData.current.isFinished = true;
       }
 
       if (tableAnimationData.current.isFinished) {
-        return
+        return;
       }
 
       if (tableAnimationData.current.isGoingForward) {
@@ -32,21 +35,31 @@ export const Component = ({ children }: { children: ReactElement }) => {
         tableToScroll.current!.scrollBy(-5, 0);
       }
 
-      if (tableToScroll.current!.scrollLeft > tableToScroll.current!.scrollWidth - tableToScroll.current!.clientWidth - 2) {
+      if (
+        tableToScroll.current!.scrollLeft >
+        tableToScroll.current!.scrollWidth -
+          tableToScroll.current!.clientWidth -
+          2
+      ) {
         tableAnimationData.current.isGoingForward = false;
       }
 
       requestAnimationFrame(runAnimation);
-    }
-    if (tableToScroll.current!.offsetTop < windowScroll.y + ( 2 / 3 ) * windowSize.height
-      && !tableAnimationData.current!.isRunning) {
+    };
+    if (
+      tableToScroll.current!.offsetTop <
+        windowScroll.y + (2 / 3) * windowSize.height &&
+      !tableAnimationData.current!.isRunning
+    ) {
       runAnimation();
     }
-  }, [windowScroll.y])
+  }, [windowScroll.y]);
 
-  return <div className="scroll-container" ref={tableToScroll}>
-    {children}
-  </div>;
+  return (
+    <div className="scroll-container" ref={tableToScroll}>
+      {children}
+    </div>
+  );
 };
 
 export default Component;

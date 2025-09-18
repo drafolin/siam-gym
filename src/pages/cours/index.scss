@@ -11,16 +11,15 @@ main.page-cours {
   @media screen and (max-width: 750px) {
     ul {
       width: 80%;
-
     }
   }
 
   section {
-
     &.intro {
       min-height: 30em;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center,
-      url("~/assets/images/cours.webp") center;
+      background:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center,
+        url("~/assets/images/cours.webp") center;
       background-size: cover;
       color: white;
       justify-content: center;
@@ -54,7 +53,6 @@ main.page-cours {
             @media screen and (prefers-color-scheme: dark) {
               color: white;
             }
-
           }
 
           &::before {
@@ -62,9 +60,9 @@ main.page-cours {
             content: "";
             right: 1rem;
             pointer-events: none;
-            border-left: .4rem solid transparent;
-            border-right: .4rem solid transparent;
-            border-top: .4rem solid var(--gray);
+            border-left: 0.4rem solid transparent;
+            border-right: 0.4rem solid transparent;
+            border-top: 0.4rem solid var(--gray);
             top: 45%;
             width: 0;
             height: 0;
@@ -78,7 +76,7 @@ main.page-cours {
             margin: 1em auto;
 
             .header {
-              margin: .5em 0;
+              margin: 0.5em 0;
 
               .title {
                 display: flex;
@@ -90,11 +88,11 @@ main.page-cours {
 
                 h3 {
                   width: fit-content;
-                  margin: .5em 0;
+                  margin: 0.5em 0;
                 }
 
                 p {
-                  margin: 0
+                  margin: 0;
                 }
               }
             }
@@ -210,13 +208,13 @@ main.page-cours {
       td {
         text-align: right;
         font-size: 12px;
-        padding: .5em;
+        padding: 0.5em;
       }
     }
   }
 
   .emphasis {
     font-weight: bold;
-    color: var(--accent)
+    color: var(--accent);
   }
 }
