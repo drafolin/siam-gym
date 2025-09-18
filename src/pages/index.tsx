@@ -1,14 +1,6 @@
 import "./index.scss";
 import ClubIcon from "~/assets/images/icon.svg?react";
 import DropDown from "~/components/DropDown/index";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
 import { useState } from "react";
 import BigTeam from "~/assets/images/big_team.webp";
 import SmallTeam from "~/assets/images/small_team.webp";

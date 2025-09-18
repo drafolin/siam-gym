@@ -22,7 +22,7 @@ const Component: FunctionComponent<{
 
   const shouldBeDeployed = () =>
     deploy ?? (state === "open" || state === "opening");
-  const childrenDiv = useRef<HTMLDivElement>();
+  const childrenDiv = useRef<HTMLDivElement>(null);
 
   return (
     <div className="Cstm__DD">

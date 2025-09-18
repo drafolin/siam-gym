@@ -3,7 +3,6 @@ import "./style.scss";
 import { useSize } from "ahooks";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import { CSSTransition } from "react-transition-group";
 
 enum MenuState {
   OPENING,
@@ -114,26 +113,27 @@ export const Component = () => {
           </div>
         )}
       </header>
-      <CSSTransition
-        in={
-          !isBigScreen() &&
-          (menuState === MenuState.OPENED || menuState === MenuState.OPENING)
-        }
-        timeout={350}
-        classNames="menu"
+      <nav
+        className={`menu left-0 right-0 p-8 pt-28 ${
+          menuState === MenuState.CLOSED || menuState === MenuState.CLOSING
+            ? "bottom-full -top-full"
+            : ""
+        } ${
+          menuState === MenuState.OPENED || menuState === MenuState.OPENING
+            ? "bottom-0 top-0"
+            : ""
+        }`}
       >
-        <nav className="menu">
-          <ul>
-            {menuLinks.map((v, i) => (
-              <li key={i}>
-                <Link onClick={toggleMenu} to={v.path}>
-                  {v.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </CSSTransition>
+        <ul>
+          {menuLinks.map((v, i) => (
+            <li key={i}>
+              <Link onClick={toggleMenu} to={v.path}>
+                {v.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 };

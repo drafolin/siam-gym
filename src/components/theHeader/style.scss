@@ -145,27 +145,10 @@ header {
 
 nav.menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 100vh;
   z-index: 1;
   transition: all 300ms ease-in-out;
   background-color: var(--bg);
-  padding: 2em;
   overflow: hidden;
-
-  &.menu-enter,
-  &.menu-exit-active {
-    top: 0;
-    bottom: 100vh;
-  }
-
-  &.menu-enter-active,
-  &.menu-enter-done {
-    top: 100px;
-    bottom: 0;
-  }
 
   ul {
     list-style: none;
