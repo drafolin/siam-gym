@@ -9,6 +9,8 @@ import "./tailwind.css";
 
 export const Layout = () => (
   <>
+    <div className="construction-overlay" />
+    <div className="construction-tape" title="En construction">En construction</div>
     <Header />
     <Outlet />
     <Footer />
