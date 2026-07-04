@@ -2,11 +2,12 @@ import "./index.scss";
 import ClubIcon from "~/assets/images/icon.svg?react";
 import DropDown from "~/components/DropDown/index";
 import { useState } from "react";
-import BigTeam from "~/assets/images/big_team.webp";
-import SmallTeam from "~/assets/images/small_team.webp";
-import Combat from "~/assets/images/combat.webp";
-import Gear from "~/assets/images/gear.webp";
-import Trainers from "~/assets/images/trainers.webp";
+import Img3062 from "~/assets/images/IMG_3062.webp";
+import Img3117 from "~/assets/images/IMG_3117.webp";
+import Img3157 from "~/assets/images/IMG_3157.webp";
+import Img3167 from "~/assets/images/IMG_3167.webp";
+import Img3205 from "~/assets/images/IMG_3205.webp";
+import Img3219 from "~/assets/images/IMG_3219.webp";
 
 export const Component = () => {
   const prestations = [
@@ -37,11 +38,12 @@ export const Component = () => {
   const images: {
     src: string;
   }[] = [
-    { src: BigTeam },
-    { src: SmallTeam },
-    { src: Combat },
-    { src: Gear },
-    { src: Trainers },
+    { src: Img3062 },
+    { src: Img3117 },
+    { src: Img3157 },
+    { src: Img3167 },
+    { src: Img3205 },
+    { src: Img3219 },
   ];
 
   const handleGalleryNext = () => {
