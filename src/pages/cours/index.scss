@@ -154,11 +154,6 @@ main.page-cours {
             grid-template-columns: 1fr 1fr;
             grid-gap: 1em;
             margin-bottom: 1em;
-            border-bottom: 1px solid lightgray;
-
-            & > div:not(:last-child) {
-              border-bottom: none !important;
-            }
 
             & > :nth-child(odd) {
               grid-column: 1 / 2;

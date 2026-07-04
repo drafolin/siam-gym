@@ -86,7 +86,7 @@ export const Component = () => {
             );
           })}
         </ul>
-        <span className={"center"}>
+        <span className={"text-center"}>
           Plus d'informations sur <a href="/cours">la page des cours</a>
         </span>
       </section>

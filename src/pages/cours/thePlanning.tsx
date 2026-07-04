@@ -8,7 +8,7 @@ export const Component = () => {
       day: "Lundi",
       courses: [
         {
-          name: "Punch 'n' fit",
+          name: "Punch'n'fit",
           timeStart: "18:00",
           timeEnd: "19:00",
           teacher: "Guillaume",
@@ -50,7 +50,7 @@ export const Component = () => {
       day: "Vendredi",
       courses: [
         {
-          name: "Punch 'n' fit",
+          name: "Punch'n'fit",
           note: ["Sur demande"],
           timeStart: "18:00",
           timeEnd: "19:00",

@@ -71,6 +71,7 @@ main {
 
     &.gallery {
       text-align: center;
+      min-height: auto;
 
       .carousel {
         width: 100%;
