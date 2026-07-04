@@ -1,5 +1,4 @@
 import "./index.scss";
-import ScrollView from "~/components/ScrollView";
 import ThePlanning from "./thePlanning.tsx";
 
 export const Component = () => {
