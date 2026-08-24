@@ -14,6 +14,7 @@ RUN pnpm run build
 FROM nginxinc/nginx-unprivileged:1.31-alpine3.24 AS server
 
 COPY --from=builder --chown=nginx:nginx /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 
 USER nginx
 
