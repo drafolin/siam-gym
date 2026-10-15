@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpgks.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpgks.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
   outputs =
     { nixpkgs, ... }:
@@ -11,18 +11,8 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          bun
+          pnpm
           nodejs
-
-          (writeShellApplication {
-            name = "start";
-
-            runtimeInputs = [ ];
-
-            text = ''
-              bun run dev
-            '';
-          })
         ];
       };
     };
